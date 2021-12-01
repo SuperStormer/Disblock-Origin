@@ -41,6 +41,11 @@ div[aria-controls="billing-tab"] { display: none; }
 .bannerNitroUpsell-1aRyq0 { display: none; }
 .optionBox-1b4n4P:nth-of-type(2) { display: none; }
 
+/* Per server avatar */
+.perServerAvatarTitle-2XHGZl { display: none; }
+.perServerAvatarTitle-2XHGZl + div { display: none; }
+.disabled-3JC_nn { display: none; }
+
 /* Sticker picker */
 
 /* Hide sticker picker */
