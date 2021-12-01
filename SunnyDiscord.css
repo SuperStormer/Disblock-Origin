@@ -20,6 +20,7 @@ button[aria-label="Open sticker picker"] { display: none; }
 .clickable-1JJAn8[data-list-item-id$="___nitro"] { display: none; }
 
 /* Join more than 100 servers upsell */
+.tutorialContainer-11ICd5 + .listItem-2Ig28I > .listItemWrapper-2MsAsM { display: none; } 
 .nitroUpsell-27TJ8P { display: none; } 
 
 /* Hide Nitro separator in settings */
@@ -90,3 +91,9 @@ button[id="sticker-picker-tab"] { display: none; }
 .disabledOptionLabel-1D87i9 { display: none; }
 .availabilityIndicator-3BD0dt { display: none; }
 .checkboxWrapperDisabled-36r8NK { display: none; }
+
+/* Boosted server badge */
+.guildIconContainer-2hr-Lk { display: none; }
+
+/* Boost progress bar */
+.container-3fNISf { display: none; }
