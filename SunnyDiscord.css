@@ -19,6 +19,9 @@ button[aria-label="Open sticker picker"] { display: none; }
 /* Hide Nitro button in Home */
 .clickable-1JJAn8[data-list-item-id$="___nitro"] { display: none; }
 
+/* Join more than 100 servers upsell */
+.nitroUpsell-27TJ8P { display: none; } 
+
 /* Hide Nitro separator in settings */
 .separator-gCa7yv { display: none; }
 .separator-gCa7yv ~ .separator-gCa7yv { display: block; }
