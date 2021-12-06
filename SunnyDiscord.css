@@ -1,9 +1,3 @@
-/* Bugfix laggy server scroll */
-.wrapper-25eVIn svg { overflow: hidden; }
-
-/* Hide Help button */
-.iconWrapper-2OrFZ1[aria-label="Help"] { display: none; }
-
 /* ------------------ */
 /* Hide Nitro upsells */
 /* ------------------ */
@@ -20,6 +14,7 @@ button[aria-label="Open sticker picker"] { display: none; }
 .clickable-1JJAn8[data-list-item-id$="___nitro"] { display: none; }
 
 /* Join more than 100 servers upsell */
+/* TODO also hide the button when it appears sometimes */
 .tutorialContainer-11ICd5 + .listItem-2Ig28I > .listItemWrapper-2MsAsM { display: none; } 
 .nitroUpsell-27TJ8P { display: none; } 
 
@@ -51,8 +46,6 @@ div[aria-controls="billing-tab"] { display: none; }
 .perServerAvatarTitle-2XHGZl + div { display: none; }
 .disabled-3JC_nn { display: none; }
 
-/* Sticker picker */
-
 /* Hide sticker picker */
 button[id="sticker-picker-tab"] { display: none; }
 .upsell-voV9AC { display: none; }
@@ -62,6 +55,9 @@ button[id="sticker-picker-tab"] { display: none; }
 .packDescription-3drkLS { display: none; }
 .stickersList-Q202uA { display: none; }
 .packActions-2i3SLO { display: none; }
+
+/* Hide message size upsells */
+.upsell-34F9Me { display: none; }
 
 /* Hide Go Live quality upsells */
 .selectorButtonPremiumRequired-mKMbIu { display: none; }
@@ -80,6 +76,7 @@ button[id="sticker-picker-tab"] { display: none; }
 /* Server settings */
 /* TODO: fully hide Boost customization options */
 .bannerUpsellContainer-1KrLvE { display: none; }
+.bannerUpsellContainer-1KrLvE + div { display: none; }
 .premiumGuildAvailabilityIndicator-2yVVuW { display: none; }
 .upsell-ldFwNr { display: none; }
 
@@ -98,3 +95,20 @@ button[id="sticker-picker-tab"] { display: none; }
 
 /* Boost progress bar */
 .container-3fNISf { display: none; }
+
+/* Disable clicking boost incon */
+.premiumIcon-1rDbWQ { pointer-events: none; }
+
+/* ------------------ */
+/* General annoyances */
+/* ------------------ */
+
+/* Bugfix laggy server scroll */
+.wrapper-25eVIn svg { overflow: hidden; }
+
+/* Hide Help button */
+.iconWrapper-2OrFZ1[aria-label="Help"] { display: none; }
+
+/* Hide Snowsgiving promo */
+.clickable-1JJAn8[data-list-item-id$="___snowsgiving"] { display: none; }
+.contentWrapperWithSnowsgivingNotice-1AvSpB:first-child { display: none; }
