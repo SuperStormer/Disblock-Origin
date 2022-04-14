@@ -7,11 +7,8 @@ button[aria-label="Send a gift"] { display: none; }
 button[aria-label="Open GIF picker"] { display: none; }
 button[aria-label="Open sticker picker"] { display: none; }
 
-/* Hide sticker popup window that appears when you type */
-.da-channelTextArea > .container-JHR0NT { display: none; }
-
 /* Hide Nitro button in Home */
-.clickable-1JJAn8[data-list-item-id$="___nitro"] { display: none; }
+a[data-list-item-id$="___nitro"] { display: none; }
 
 /* Join more than 100 servers upsell */
 /* TODO also hide the button when it appears sometimes */
@@ -19,12 +16,12 @@ button[aria-label="Open sticker picker"] { display: none; }
 .nitroUpsell-27TJ8P { display: none; } 
 
 /* Hide Nitro separator in settings */
-.separator-gCa7yv { display: none; }
-.separator-gCa7yv ~ .separator-gCa7yv { display: block; }
+div[aria-label="User Settings"] > div[class^="separator"] { display: none; }
+div[aria-label="User Settings"] > div[class^="separator"] ~  div[class^="separator"] { display: block; }
 
 /* Hide Billing header in settings */
-.header-2RyJ0Y:nth-child(n+2) { display: none; }
-.header-2RyJ0Y:nth-child(n+10) { display: block; }
+div[aria-label="User Settings"] > div[class^="header"]:nth-child(n+2) { display: none; }
+div[aria-label="User Settings"] > div[class^="header"]:nth-child(n+10) { display: block; }
 
 /* Hide Nitro tabs in Settings */
 div[aria-controls="discord-nitro-tab"] { display: none; }
@@ -34,33 +31,31 @@ div[aria-controls="library-inventory-tab"] { display: none; }
 div[aria-controls="billing-tab"] { display: none; }
 
 /* Hide profile customization upsells */
-.premiumInlineNotice-159eYs { display: none; }
-.premiumInlineNotice-pHlw4O { display: none; }
-.shinyButton-3uFlM- { display: none; }
-.customizationSection-2f2fhI:nth-of-type(3) { display: none; }
-.bannerNitroUpsell-1aRyq0 { display: none; }
-.optionBox-1b4n4P:nth-of-type(2) { display: none; }
+button[class^="shinyButton"] { display: none; }
+svg[class^="nitro"] { display: none; }
+div[class^="customizationSection"]:nth-of-type(3) { display: none; }
+div[class^="bannerNitroUpsell"] { display: none; }
+div[class^="optionBox"]:nth-of-type(2) { display: none; }
 
 /* Per server avatar */
-.perServerAvatarTitle-2XHGZl { display: none; }
-.perServerAvatarTitle-2XHGZl + div { display: none; }
-.disabled-3JC_nn { display: none; }
+/* TODO find a way to hide "Unlock Avatar"*/
+div[class^="upsellContainer"] { display: none; }
+div[class*=" disabled-"] { display: none; }
 
 /* Hide sticker picker */
 button[id="sticker-picker-tab"] { display: none; }
-.upsell-voV9AC { display: none; }
-.emptyGuildUpsell-3UP6BQ { display: none; }
-
-/* Sticker popout */
-.packDescription-3drkLS { display: none; }
-.stickersList-Q202uA { display: none; }
-.packActions-2i3SLO { display: none; }
 
 /* Hide message size upsells */
-.upsell-34F9Me { display: none; }
+div[class*=" upsell-"] { display: none; }
 
 /* Hide Go Live quality upsells */
-.selectorButtonPremiumRequired-mKMbIu { display: none; }
+button[class*=" selectorButtonPremiumRequired-"] { display: none; }
+
+/* Hide Nitro profile badge */
+div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }
+
+/* Hide ad in profile banners */
+div[class^="premiumIconWrapper"] { display: none; }
 
 .emojiSection-3Fb9ix > .flex-1xMQg5 > .flex-1xMQg5 > .size14-e6ZScH { display: none; }
 
@@ -69,46 +64,40 @@ button[id="sticker-picker-tab"] { display: none; }
 /* ------------- */
 
 /* Server dropdown */
-.colorPremium-p4p7qO { display: none; }
-/* TODO: fix hiding separator */
-.colorPremium-p4p7qO + .separator-2I32lJ { display: none; }
+div[class*=" colorPremium-"] { display: none; }
+div[id="guild-header-popout"] > div > div[role="separator"] { display: none; }
+div[id="guild-header-popout"] > div > div[role="separator"] ~ div[role="separator"] { display: block; }
 
 /* Server settings */
 /* TODO: fully hide Boost customization options */
-.bannerUpsellContainer-1KrLvE { display: none; }
-.bannerUpsellContainer-1KrLvE + div { display: none; }
-.premiumGuildAvailabilityIndicator-2yVVuW { display: none; }
-.upsell-ldFwNr { display: none; }
+div[class^="serverBoostTabItem"] { display: none; }
+div[class^="serverBoostTabItem"] + div[class^="separator"] { display: none; }
+div[aria-controls="stickers-tab"] { display: none; }
+div[aria-controls="vanity_url-tab"] { display: none; }
 
-/* Hide tabs */
-.item-PXvHYJ[aria-controls="stickers-tab"] { display: none; }
-.serverBoostTabItem-3vujbv { display: none; }
-.serverBoostTabItem-3vujbv + .separator-gCa7yv { display: none; }
+/* Display settings in Overview */
+div[id="overview-tab"] > div > div + div > div:last-child{ display: none; }
 
 /* Thread archive times */
-.disabledOptionLabel-1D87i9 { display: none; }
-.availabilityIndicator-3BD0dt { display: none; }
+span[class*=" disabledOptionLabel-"] { display: none; }
+div[class^="availabilityIndicator"] { display: none; }
 .checkboxWrapperDisabled-36r8NK { display: none; }
 
 /* Boosted server badge */
-.guildIconContainer-2hr-Lk { display: none; }
+div[class^="guildIconContainer"] { display: none; }
 
 /* Boost progress bar */
-.container-3fNISf { display: none; }
+ul[aria-label="Channels"] > div + div + div[class^="container-"] { display: none; }
 
-/* Disable clicking boost incon */
-.premiumIcon-1rDbWQ { pointer-events: none; }
+/* Server boost profile badge */
+div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }
 
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
 
 /* Bugfix laggy server scroll */
-.wrapper-25eVIn svg { overflow: hidden; }
+div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
 
 /* Hide Help button */
-.iconWrapper-2OrFZ1[aria-label="Help"] { display: none; }
-
-/* Hide Snowsgiving promo */
-.clickable-1JJAn8[data-list-item-id$="___snowsgiving"] { display: none; }
-.contentWrapperWithSnowsgivingNotice-1AvSpB:first-child { display: none; }
+div[aria-label="Help"] { display: none; }
