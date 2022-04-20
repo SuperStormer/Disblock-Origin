@@ -92,6 +92,9 @@ ul[aria-label="Channels"] > div + div + div[class^="container-"] { display: none
 /* Server boost profile badge */
 div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }
 
+/* Boost in chat bar */
+button[aria-label="Boost this server"] { display: none; }
+
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
