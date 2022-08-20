@@ -32,6 +32,7 @@ div[aria-label="User Settings"] > div[aria-label="Connections"] + div[class^="it
 div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item-"] + div[class^="separator-"] { display: none; }
 
 /* Hide profile customization upsells */
+div[id="account-style-your-profile"] { display: none; }
 button[class^="shinyButton"] { display: none; }
 svg[class^="nitro"] { display: none; }
 div[class^="customizationSection"]:nth-of-type(3) { display: none; }
