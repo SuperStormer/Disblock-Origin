@@ -3,6 +3,7 @@
 /* ------------------ */
 
 /* Chatbox buttons */
+div[aria-label="Start an Activity"] { display: none; }
 button[aria-label="Send a gift"] { display: none; }
 button[aria-label="Open GIF picker"] { display: none; }
 button[aria-label="Open sticker picker"] { display: none; }
@@ -16,19 +17,19 @@ a[data-list-item-id$="___nitro"] { display: none; }
 .nitroUpsell-27TJ8P { display: none; } 
 
 /* Hide Nitro separator in settings */
-div[aria-label="User Settings"] > div[class^="separator"] { display: none; }
-div[aria-label="User Settings"] > div[class^="separator"] ~  div[class^="separator"] { display: block; }
-
-/* Hide Billing header in settings */
-div[aria-label="User Settings"] > div[class^="header"]:nth-child(n+2) { display: none; }
-div[aria-label="User Settings"] > div[class^="header"]:nth-child(n+10) { display: block; }
+deiv[aria-label="User Settings"] > div[class^="separator"] { display: none; }
+deiv[aria-label="User Settings"] > div[class^="separator"] ~  div[class^="separator"] { display: block; }
 
 /* Hide Nitro tabs in Settings */
-div[aria-controls="discord-nitro-tab"] { display: none; }
-div[aria-controls="nitro-server-boost-tab"] { display: none; }
-div[aria-controls="subscriptions-tab"] { display: none; }
-div[aria-controls="library-inventory-tab"] { display: none; }
-div[aria-controls="billing-tab"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Nitro"] + div { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item-"] { display: none; }
+
+/* Hide Billing header and separator */
+div[aria-label="User Settings"] > div[aria-label="Connections"] + div[class^="item-"] + div[class^="separator-"] + div[class^="header-"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item-"] + div[class^="separator-"] { display: none; }
 
 /* Hide profile customization upsells */
 button[class^="shinyButton"] { display: none; }
