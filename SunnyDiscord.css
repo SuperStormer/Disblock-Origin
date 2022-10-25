@@ -14,7 +14,11 @@ a[data-list-item-id$="___nitro"] { display: none; }
 /* Join more than 100 servers upsell */
 /* TODO also hide the button when it appears sometimes */
 .tutorialContainer-11ICd5 + .listItem-2Ig28I > .listItemWrapper-2MsAsM { display: none; } 
-.nitroUpsell-27TJ8P { display: none; }
+.nitroUpsell-27TJ8P { display: none; } 
+
+/* Hide Nitro separator in settings */
+deiv[aria-label="User Settings"] > div[class^="separator"] { display: none; }
+deiv[aria-label="User Settings"] > div[class^="separator"] ~  div[class^="separator"] { display: block; }
 
 /* Hide Nitro tabs in Settings */
 div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
@@ -34,6 +38,7 @@ svg[class^="nitro"] { display: none; }
 div[class^="customizationSection"]:nth-of-type(3) { display: none; }
 div[class^="bannerNitroUpsell"] { display: none; }
 div[class^="optionBox"]:nth-of-type(2) { display: none; }
+div[class^="premiumFeatureBorder"] { display: none; }
 
 /* Per server avatar */
 /* TODO find a way to hide "Unlock Avatar"*/
@@ -54,6 +59,10 @@ div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }
 
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
+
+/* Hide ad in Activities menu */
+div[class^="tierCtaContainer"] { display: none; }
+div[class^="tierCtaContainer"] + div { display: none; }
 
 .emojiSection-3Fb9ix > .flex-1xMQg5 > .flex-1xMQg5 > .size14-e6ZScH { display: none; }
 
@@ -92,6 +101,9 @@ div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }
 
 /* Boost in chat bar */
 button[aria-label="Boost this server"] { display: none; }
+
+/* Boost upsell when making an invite link */
+div[class*="inviteBannerUpsell"] { display: none; }
 
 /* ------------------ */
 /* General annoyances */
