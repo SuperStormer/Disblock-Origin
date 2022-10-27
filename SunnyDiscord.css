@@ -39,6 +39,7 @@ div[class^="customizationSection"]:nth-of-type(3) { display: none; }
 div[class^="bannerNitroUpsell"] { display: none; }
 div[class^="optionBox"]:nth-of-type(2) { display: none; }
 div[class^="premiumFeatureBorder"] { display: none; }
+div[class*="upsellOverlayContainer-"] { display: none; }
 
 /* Per server avatar */
 /* TODO find a way to hide "Unlock Avatar"*/
