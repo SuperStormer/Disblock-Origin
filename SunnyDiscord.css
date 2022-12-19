@@ -61,6 +61,9 @@ div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
 
+/* Hide profile customization ad in banners */
+div[class^="userPopoutInner-"] > div[class^="wrapper-"] { display: none; }
+
 /* Hide ad in Activities menu */
 div[class^="tierCtaContainer"] { display: none; }
 div[class^="tierCtaContainer"] + div { display: none; }
