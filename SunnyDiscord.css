@@ -108,6 +108,23 @@ button[aria-label="Boost this server"] { display: none; }
 /* Boost upsell when making an invite link */
 div[class*="inviteBannerUpsell"] { display: none; }
 
+/* --------------- */
+/* Super reactions */
+/* --------------- */
+
+/* Initial upsell popup in "add reaction" window */
+div[class*="burstReactionTabTooltip-"] { display: none; }
+
+/* Super reactions button */
+button[id="super-reaction-picker-tab"] { display: none; }
+
+/* Super reaction animation */
+div[class^="reactionInner-"] > div > div[class^="effectsWrapper-"] { display: none; }
+img[class*="hideEmoji-"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
+@keyframes blink-emoji {  
+  50% { opacity: 0; }
+}
+
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
