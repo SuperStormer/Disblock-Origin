@@ -112,8 +112,19 @@ div[class*="inviteBannerUpsell"] { display: none; }
 /* General annoyances */
 /* ------------------ */
 
+/* Avatar decorations */
+img[class^="avatarDecoration-"] { display: none; }
+svg[class^="avatarDecoration-"] { display: none; }
+svg[class^="bannerSVGWrapper-"] > mask { display: none; }
+
 /* Bugfix laggy server scroll */
 div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
 
 /* Hide Help button */
 div[aria-label="Help"] { display: none; }
+
+/* Hide explore servers button */
+div[aria-label="Servers"] + div + div { display: none; }
+
+/* Hide HUMONGOUS shadow thing in profile popup */
+div[id^="popout_"] { width: fit-content; }
