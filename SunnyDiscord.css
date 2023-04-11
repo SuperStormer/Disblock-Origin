@@ -125,6 +125,13 @@ img[class*="hideEmoji-"] { animation: blink-emoji 1s linear infinite; opacity: 2
   50% { opacity: 0; }
 }
 
+/* Add Super Reaction menu item */
+#message-add-reaction-1 { display: none; }
+
+
+/* Avatar decorations upsell popup */
+div[class*="contentPremium-"] { display: none; }
+
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
