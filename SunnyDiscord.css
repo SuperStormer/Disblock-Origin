@@ -126,7 +126,7 @@ img[class*="hideEmoji-"] { animation: blink-emoji 1s linear infinite; opacity: 2
 }
 
 /* Add Super Reaction menu item */
-#message-add-reaction-1 { display: none; }
+#message-actions-add-reaction-1 { display: none; }
 div[aria-label="Add Super Reaction"] { display: none; }
 
 
