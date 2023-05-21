@@ -54,8 +54,8 @@ div[class*=" upsell-"] { display: none; }
 /* Hide Go Live quality upsells */
 button[class*=" selectorButtonPremiumRequired-"] { display: none; }
 
-/* Hide Nitro profile badge */
-div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }
+/* Hide Nitro profile badge 
+div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }*/
 
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
@@ -67,6 +67,8 @@ div[class^="userPopoutInner-"] > div[class^="wrapper-"] { display: none; }
 div[class^="tierCtaContainer"] { display: none; }
 div[class^="tierCtaContainer"] + div { display: none; }
 
+/* Hide ad in emoji list */
+div[class*=" premiumUpsell-"] { display: none; }
 .emojiSection-3Fb9ix > .flex-1xMQg5 > .flex-1xMQg5 > .size14-e6ZScH { display: none; }
 
 /* ------------- */
@@ -99,8 +101,8 @@ div[class^="guildIconContainer"] { display: none; }
 /* Boost progress bar */
 ul[aria-label="Channels"] > div + div + div[class^="container-"] { display: none; }
 
-/* Server boost profile badge */
-div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }
+/* Server boost profile badge
+div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }*/
 
 /* Boost in chat bar */
 button[aria-label="Boost this server"] { display: none; }
@@ -126,9 +128,11 @@ img[class*="hideEmoji-"] { animation: blink-emoji 1s linear infinite; opacity: 2
 }
 
 /* Add Super Reaction menu item */
-#message-actions-add-reaction-1 { display: none; }
+#message-add-reaction-1 { display: none; }
 div[aria-label="Add Super Reaction"] { display: none; }
 
+/*[class*="colorPremiumGradient-"], [id^="message-actions-add-reaction-1"],
+[aria-label="Add Super Reaction"] { display:none; }*/
 
 /* Avatar decorations upsell popup */
 div[class*="contentPremium-"] { display: none; }
@@ -141,6 +145,9 @@ div[class*="contentPremium-"] { display: none; }
 img[class^="avatarDecoration-"] { display: none; }
 svg[class^="avatarDecoration-"] { display: none; }
 svg[class^="bannerSVGWrapper-"] > mask { display: none; }
+
+/* Remove Birthday button in home */
+a[href="/activities"] { display: none; }
 
 /* Bugfix laggy server scroll */
 div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
