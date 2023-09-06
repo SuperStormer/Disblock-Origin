@@ -43,7 +43,6 @@ div[class*="upsellOverlayContainer-"] { display: none; }
 /* Per server avatar */
 /* TODO find a way to hide "Unlock Avatar"*/
 div[class^="upsellContainer"] { display: none; }
-div[class*=" disabled-"] { display: none; }
 
 /* Hide sticker picker */
 button[id="sticker-picker-tab"] { display: none; }
