@@ -120,6 +120,7 @@ div[class*="burstReactionTabTooltip-"] { display: none; }
 button[id="super-reaction-picker-tab"] { display: none; }
 
 /* Super reaction animation */
+div[class*="shakeReaction-"] { animation: none !important; }
 div[class^="reactionInner-"] > div > div[class^="effectsWrapper-"] { display: none; }
 img[class*="hideEmoji-"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
 @keyframes blink-emoji {  
