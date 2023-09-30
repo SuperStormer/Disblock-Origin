@@ -168,6 +168,3 @@ div[aria-label="Servers"] + div + div { display: none; }
 
 /* Hide HUMONGOUS shadow thing in profile popup */
 div[id^="popout_"] { width: fit-content; }
-
-/* Hide navbar in ArmCord */
-div[class^="withFrame-"] { display: none; }
