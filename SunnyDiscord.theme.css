@@ -154,6 +154,9 @@ img[class^="avatarDecoration-"] { display: none; }
 svg[class^="avatarDecoration-"] { display: none; }
 svg[class^="bannerSVGWrapper-"] > mask { display: none; }
 
+/* Profile effetcs */
+div[class^="profileEffects-"] { display: none; }
+
 /* Remove Birthday button in home */
 a[href="/activities"] { display: none; }
 
