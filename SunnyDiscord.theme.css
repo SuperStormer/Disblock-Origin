@@ -54,6 +54,12 @@ div[class*="upsellOverlayContainer-"] { display: none; }
 /* Hide icon upsell */
 [class^="selectionGroup-"] , [class^="presets-"] > [class*="appIconSelectionContainer-"] { display: none; }
 
+/* Hide Appearance upsells */
+/* bit hacky, haven't found a way to hide the entire section safely */
+section[class*="basicThemeSelectors_"] + section { display: none; }
+div[class^="tryItOutButtons_"] { display: none; }
+div[role="radiogroup"] > div > div[class^="presets_"] > div[class^="appIconSelectionContainer_"] { display: none; }
+
 /* Per server avatar */
 /* TODO find a way to hide "Unlock Avatar"*/
 div[class^="upsellContainer"] { display: none; }
