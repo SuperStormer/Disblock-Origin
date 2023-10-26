@@ -19,6 +19,9 @@ button[aria-label="Open sticker picker"] { display: none; }
 /* Hide Nitro button in Home */
 a[data-list-item-id$="___nitro"] { display: none; }
 
+/* Hide shop button in Home */
+a[data-list-item-id$="___shop"] { display: none; }
+
 /* Join more than 100 servers upsell */
 /* TODO also hide the button when it appears sometimes */
 .tutorialContainer-11ICd5 + .listItem-2Ig28I > .listItemWrapper-2MsAsM { display: none; } 
