@@ -48,6 +48,9 @@ div[class^="optionBox"]:nth-of-type(2) { display: none; }
 div[class^="premiumFeatureBorder"] { display: none; }
 div[class*="upsellOverlayContainer-"] { display: none; }
 
+/* Hide icon upsell */
+[class^="selectionGroup-"] , [class^="presets-"] > [class*="appIconSelectionContainer-"] { display: none; }
+
 /* Per server avatar */
 /* TODO find a way to hide "Unlock Avatar"*/
 div[class^="upsellContainer"] { display: none; }
@@ -106,7 +109,7 @@ div[class^="availabilityIndicator"] { display: none; }
 div[class^="guildIconContainer"] { display: none; }
 
 /* Boost progress bar */
-ul[aria-label="Channels"] > div + div + div[class^="container-"] { display: none; }
+div[aria-label*="Buy Boosts"] { display: none; }
 
 /* Server boost profile badge
 div[class^="clickable-"][aria-label^="Server boosting"] { display: none; }*/
@@ -171,3 +174,12 @@ div[aria-label="Servers"] + div + div { display: none; }
 
 /* Hide HUMONGOUS shadow thing in profile popup */
 div[id^="popout_"] { width: fit-content; }
+
+/* ------------------ */
+/* Temporary events */
+/* ------------------ */
+
+/* "Falloween" in (user) profile */
+[class*="falloweenBackgroundImage-"] { display: none; }
+[class*="falloweenArtContainer-"] { display: none; }
+[class*="artContainer-"] { display: none; }
