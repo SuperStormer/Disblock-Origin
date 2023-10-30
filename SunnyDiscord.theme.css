@@ -171,6 +171,9 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { 
 /* Server booster member list badge */
 /* svg[aria-label^="Server boosting since"] { display: none; } */
 
+/* Hide all super reactions entirely */
+/* div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: none; } */
+
 /* ------------------ */
 /* Temporary events */
 /* ------------------ */
