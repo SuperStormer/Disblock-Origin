@@ -44,6 +44,9 @@ div[class*="upsellOverlayContainer_"] { display: none; }
 /* Profiles: Try out Nitro! box */
 div[class^="premiumFeatureBorder"] { display: none; }
 
+/* Profiles: New style ad */
+#profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
+
 /* Profiles: Profile effect box (this only gets the separator because of the above rule*/
 div[class^="customizationSection"]:has(div[class^="premiumFeatureBorder"]) { display: none; }
 
