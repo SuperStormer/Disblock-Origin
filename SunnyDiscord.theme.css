@@ -1,5 +1,4 @@
-/* Hide Library button in Home */
-a[data-list-item-id*="___library"] { display: none; }/**
+/**
  * @name Adblock
  * @author TheSunCat and contributors
  * @version 1.0.0
