@@ -144,6 +144,9 @@ div[class^="burstReactionTooltipPrompt"] { display: none; }
 svg[class*="avatarDecoration_"] { display: none; }
 img[class^="avatarDecoration_"] { display: none; }
 
+/* Avatar decorations upsell */
+div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop"]) { display: none; }
+
 /* Profile effects */
 div[class^="profileEffects"] { display: none; }
 
