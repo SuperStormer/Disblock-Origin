@@ -78,6 +78,9 @@ button[class*=" selectorButtonPremiumRequired"] { display: none; }
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
 
+/* Hide "Level up your look" ad in account profile popout */
+div[class^="container_"]:has(div[class^="ctaContainer"]) { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
