@@ -41,14 +41,18 @@ div[aria-label="User Settings"] > div[aria-label="Connections"] + div[class^="it
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
 
+/* Profiles: Choose a GIF avatar */
+div[class^="optionBox"]:has(div[class^="text-sm-semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+
+/* Profiles: Change decorations exclusive to Nitro */
+div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
+div[class*="effectGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Effects */
+
 /* Profiles: Try out Nitro! box */
 div[class^="premiumFeatureBorder"] { display: none; }
 
 /* Profiles: New style ad */
 #profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
-
-/* Profiles: Profile effect box (this only gets the separator because of the above rule*/
-div[class^="customizationSection"]:has(div[class^="premiumFeatureBorder"]) { display: none; }
 
 /* Profiles: Per server avatar */
 div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] { display: none; }
