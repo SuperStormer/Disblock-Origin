@@ -35,8 +35,8 @@ div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^=
 div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }
 
 /* Hide Billing header and separator */
-div[aria-label="User Settings"] > div[aria-label="Connections"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Connections"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] ~ div[class^="header_"] { display: block; }
+div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
+div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] ~ div[class^="header_"] { display: block; }
 
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
