@@ -79,7 +79,7 @@ button[class*=" selectorButtonPremiumRequired"] { display: none; }
 div[class^="premiumIconWrapper"] { display: none; }
 
 /* Hide "Level up your look" ad in account profile popout */
-div[class^="container_"]:has(div[class^="ctaContainer"]) { display: none; }
+div[class*="hasCollectiblesUpsell"] > div[class ^="userPopoutInner"] > div[class*="animation_"] { display: none; }
 
 /* ------------- */
 /* Server boosts */
