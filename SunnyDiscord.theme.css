@@ -1,7 +1,6 @@
 /**
  * @name Adblock
  * @author TheSunCat and contributors
- * @version 1.0.0
  * @description Hide all Nitro & Boost upsells on Discord!
  * @source https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906
  */
@@ -13,8 +12,6 @@
 /* Chatbox buttons */
 div[aria-label="Start an Activity"] { display: none; }
 button[aria-label="Send a gift"] { display: none; }
-button[aria-label="Open GIF picker"] { display: none; }
-button[aria-label="Open sticker picker"] { display: none; }
 
 /* Hide Nitro button in Home */
 a[data-list-item-id$="___nitro"] { display: none; }
@@ -69,9 +66,6 @@ div[class^="selectionGroup"]:has(div[role="radiogroup"] > div > div[class^="pres
 
 /* Appearance: Theme upsells */
 section[class*="basicThemeSelectors_"] + section { display: none; }
-
-/* Hide sticker picker */
-button[id="sticker-picker-tab"] { display: none; }
 
 /* Hide message size upsells */
 div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
@@ -147,6 +141,13 @@ div[class^="burstReactionTooltipPrompt"] { display: none; }
 /* General annoyances */
 /* ------------------ */
 
+/* Chatbox buttons */
+button[aria-label="Open GIF picker"] { display: none; }
+button[aria-label="Open sticker picker"] { display: none; }
+
+/* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
+button[id="sticker-picker-tab"] { display: none; }
+
 /* Avatar decorations */
 svg[class*="avatarDecoration_"] { display: none; }
 img[class^="avatarDecoration_"] { display: none; }
@@ -193,8 +194,3 @@ a[data-list-item-id*="___library"] { display: none; }
 /* ------------------ */
 /* Temporary events */
 /* ------------------ */
-
-/* "Falloween" in (user) profile */
-[class*="falloweenBackgroundImage"] { display: none; }
-[class*="falloweenArtContainer"] { display: none; }
-[class*="artContainer"] { display: none; }
