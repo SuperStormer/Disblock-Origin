@@ -79,6 +79,9 @@ div[class^="premiumIconWrapper"] { display: none; }
 /* Hide "Level up your look" ad in account profile popout */
 div[class*="hasCollectiblesUpsell"] > div[class ^="userPopoutInner"] > div[class*="animation_"] { display: none; }
 
+/* Hide "Gift Nitro" button in DM User Profile sidebar */
+button[class*=" giftButton"] { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
