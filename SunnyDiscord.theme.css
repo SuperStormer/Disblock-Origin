@@ -82,6 +82,15 @@ div[class*="hasCollectiblesUpsell"] > div[class ^="userPopoutInner"] > div[class
 /* Hide "Gift Nitro" button in DM User Profile sidebar */
 button[class*=" giftButton"] { display: none; }
 
+/* Emoji popout: "Get nitro" button */
+button[class^=shinyButton]:has(div[class*=premiumSubscribeButton]) { display: none; }
+
+/* Emoji popout: "Powered by nitro" text */
+div[class^=nitroTextAndBadge] { display: none; }
+
+/* Hide "Custom emojis" Nitro text from hover tooltip */
+div[class^=tooltipPremiumContent] { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
