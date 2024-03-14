@@ -93,6 +93,7 @@ div[class^=tooltipPremiumContent] { display: none; }
 
 /* Emoji autocomplete upsell (wowww this stoops low, even for them) */
 div[class^="nitroTopDividerContainer"], div[class^="nitroTopDividerContainer"] ~ div { display: none; }
+div[class*="categorySectionNitroLocked"] { display: none; }
 
 /* ------------- */
 /* Server boosts */
