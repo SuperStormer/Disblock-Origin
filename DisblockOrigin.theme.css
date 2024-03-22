@@ -107,7 +107,10 @@ div[class^=categoryItemLockIconContainer] { display: none; }
 div[class^=emojiLockIconContainer] { display: none; }
 
 /* Restore old grayscale filter on Nitro emojis so you don't accidentally click them and get an ad */
-img[class^="lockedEmoji"] { filter: grayscale(); }
+div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEmoji"] { filter: grayscale(); }
+
+/* Grayscale for emoji that are simply locked and not in the Nitro section */
+button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(); }
 
 /* ------------- */
 /* Server boosts */
