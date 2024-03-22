@@ -93,7 +93,21 @@ div[class^=tooltipPremiumContent] { display: none; }
 
 /* Emoji autocomplete upsell (wowww this stoops low, even for them) */
 div[class^="nitroTopDividerContainer"], div[class^="nitroTopDividerContainer"] ~ div { display: none; }
-div[class*="categorySectionNitroLocked"] { display: none; }
+
+/* Hide the 'Unlock these emoji with Nitro' in emoji picker */
+div[class^=upsellContainer] { display: none; }
+
+/* Remove the purple background in the emoji picker and autocomplete */
+div[class*=categorySectionNitroLocked] { background-color: unset !important; }
+
+/* Hide the lock icon on servers icon in the emoji picker */
+div[class^=categoryItemLockIconContainer] { display: none; }
+
+/* Hide the lock icon on emoji in the emoji picker */
+div[class^=emojiLockIconContainer] { display: none; }
+
+/* Restore old grayscale filter on Nitro emojis so you don't accidentally click them and get an ad */
+img[class^="lockedEmoji"] { filter: grayscale(); }
 
 /* ------------- */
 /* Server boosts */
