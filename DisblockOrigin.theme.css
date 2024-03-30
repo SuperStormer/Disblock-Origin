@@ -115,6 +115,9 @@ div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEm
 /* Grayscale for emoji that are simply locked and not in the Nitro section */
 button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(); }
 
+/* Avatar decorations upsell */
+div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop"]) { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
@@ -188,9 +191,6 @@ button[id="sticker-picker-tab"] { display: none; }
 svg[class*="avatarDecoration_"] { display: none; }
 img[class^="avatarDecoration_"] { display: none; }
 
-/* Avatar decorations upsell */
-div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop"]) { display: none; }
-
 /* Profile effects */
 div[class^="profileEffects"] { display: none; }
 
@@ -227,6 +227,5 @@ a[data-list-item-id*="___library"] { display: none; }
 /* Hide all super reactions entirely */
 /* div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: none; } */
 
-/* ------------------ */
-/* Temporary events */
-/* ------------------ */
+/* Hide "Active Now" sidebar in friends list */
+/* div[class^="nowPlayingColumn"] { display: none; } */
