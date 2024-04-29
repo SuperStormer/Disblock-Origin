@@ -1,5 +1,5 @@
 /**
- * @name Adblock
+ * @name Adblock for Discord
  * @author TheSunCat and contributors
  * @version 1.0.0
  * @description Hide all Nitro & Boost upsells on Discord!
@@ -15,10 +15,10 @@ div[aria-label="Start an Activity"] { display: none; }
 button[aria-label="Send a gift"] { display: none; }
 
 /* Hide Nitro button in Home */
-a[data-list-item-id$="___nitro"] { display: none; }
+a[href="/store"] { display: none; }
 
 /* Hide shop button in Home */
-a[data-list-item-id*="shop"] { display: none; }
+a[href="/shop"] { display: none; }
 
 /* TODO: join more than 100 servers upsell */
 
@@ -178,9 +178,9 @@ div[aria-label="Add Super Reaction"] { display: none; }
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
 
-/* ------ */
-/* Quests */
-/* ------ */
+/* --------------------------------- */
+/* Quests (straight up paid ads lol) */
+/* --------------------------------- */
 
 /* Hide quests from the gift inventory */
 div[class^="questsContainer"] > * { display: none; }
