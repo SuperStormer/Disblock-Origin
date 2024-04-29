@@ -1,6 +1,7 @@
 /**
- * @name Disblock Origin
+ * @name Adblock
  * @author TheSunCat and contributors
+ * @version 1.0.0
  * @description Hide all Nitro & Boost upsells on Discord!
  * @source https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906
  */
@@ -25,11 +26,12 @@ a[data-list-item-id*="shop"] { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Nitro"] + div { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; }
 
-/* Hide Nitro separator in settings */
-div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }
+/* Nitro separator in settings */
+/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
+/* Gift Inventory tab entirely */
+/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
 
 /* Hide Billing header and separator */
 div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
@@ -176,6 +178,16 @@ div[aria-label="Add Super Reaction"] { display: none; }
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
 
+/* ------ */
+/* Quests */
+/* ------ */
+
+/* Hide quests from the gift inventory */
+div[class^="questsContainer"] > * { display: none; }
+
+/* Completed quest profile badge (doesn't provide any use so...) */
+a[aria-label^="Completed a Quest"] { display: none; }
+
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
@@ -215,8 +227,8 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { 
 /* Hide Library button in Home */
 a[data-list-item-id*="___library"] { display: none; }
 
-/* Nitro profile badge */
-/* div[class^="clickable-"][aria-label^="Subscriber since"] { display: none; }*/
+/* Nitro profile badges */
+/*a[aria-label^="Subscriber since"], a[aria-label^="Early Supporter"] { display: none; }*/
 
 /* Server booster profile badge */
 /* a[aria-label^="Server boosting since"] { display: none; } */
