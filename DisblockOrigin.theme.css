@@ -29,9 +29,9 @@ div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: non
 div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; }
 
 /* Nitro separator in settings */
-/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
-/* Gift Inventory tab entirely */
 /*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
+/* Gift Inventory tab entirely */
+/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
 
 /* Hide Billing header and separator */
 div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
@@ -149,7 +149,7 @@ button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
 
 /* Boost progress bar */
 /* NOTE: risky, but seems ok for now */
-ul[aria-label="Channels"] > div[role="button"][class^="container"] { display: none; }
+ul[aria-label="Channels"] > li > div[role="button"][class^="container"] { display: none; }
 
 /* TODO: would be nice to hide disabled soundboard sounds & emojis
  * However, looks like it needs to be done on the JS level. This is too buggy
