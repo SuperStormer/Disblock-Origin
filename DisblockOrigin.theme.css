@@ -188,6 +188,9 @@ div[class^="questsContainer"] > * { display: none; }
 /* Completed quest profile badge (doesn't provide any use so...) */
 a[aria-label^="Completed a Quest"] { display: none; }
 
+/* Ad area above username */
+section[class^="panels"] > div[class^="wrapper"] > div:has(div[class^="questUnacceptedContent"]) { display: none; }
+
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
