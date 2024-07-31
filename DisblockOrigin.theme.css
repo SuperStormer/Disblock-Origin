@@ -20,22 +20,11 @@ a[href="/store"] { display: none; }
 /* Hide shop button in Home */
 a[href="/shop"] { display: none; }
 
-/* TODO: join more than 100 servers upsell */
-
 /* Hide Nitro tabs in Settings */
 div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Nitro"] + div { display: none; }
 div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; }
-
-/* Nitro separator in settings */
-/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
-/* Gift Inventory tab entirely */
-/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
-
-/* Hide Billing header and separator */
-div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] ~ div[class^="header_"] { display: block; }
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; } /* Billing tab */
 
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
