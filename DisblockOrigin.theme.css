@@ -11,8 +11,8 @@
 /* ------------------ */
 
 /* Chatbox buttons */
-div[aria-label="Start an Activity"] { display: none; }
-button[aria-label="Send a gift"] { display: none; }
+div[aria-label="Start an Activity" i] { display: none; }
+button[aria-label="Send a gift" i] { display: none; }
 
 /* Hide Nitro button in Home */
 a[href="/store"] { display: none; }
@@ -21,10 +21,10 @@ a[href="/store"] { display: none; }
 a[href="/shop"] { display: none; }
 
 /* Hide Nitro tabs in Settings */
-div[aria-label="User Settings"] > div[aria-label="Nitro"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Nitro"] + div { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Subscriptions"] { display: none; }
-div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] { display: none; } /* Billing tab */
+div[aria-label="User Settings" i] > div[aria-label="Nitro" i] + div { display: none; }
+div[aria-label="User Settings" i] > div[aria-label="Nitro" i] { display: none; }
+div[aria-label="User Settings" i] > div[aria-label="Subscriptions" i] { display: none; }
+div[aria-label="User Settings" i] > div[aria-label="Gift Inventory" i] + div[class^="item_"] { display: none; } /* Billing tab */
 
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
@@ -107,7 +107,7 @@ div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEm
 button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(); }
 
 /* Avatar decorations upsell */
-div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop"]) { display: none; }
+div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop" i]) { display: none; }
 
 /* ------------- */
 /* Server boosts */
@@ -162,7 +162,7 @@ img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 25
 /* Add Super Reaction menu item */
 #message-add-reaction-1 { display: none; }
 #message-actions-add-reaction-1 { display: none; }
-div[aria-label="Add Super Reaction"] { display: none; }
+div[aria-label="Add Super Reaction" i] { display: none; }
 
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
@@ -175,15 +175,15 @@ div[class^="burstReactionTooltipPrompt"] { display: none; }
 div[class^="questsContainer"] > * { display: none; }
 
 /* Completed quest profile badge (doesn't provide any use so...) */
-div[aria-label^="Completed a Quest"] { display: none; }
+div[aria-label^="Completed a Quest" i] { display: none; }
 
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
 
 /* Chatbox buttons */
-button[aria-label="Open GIF picker"] { display: none; }
-button[aria-label="Open sticker picker"] { display: none; }
+button[aria-label="Open GIF picker" i] { display: none; }
+button[aria-label="Open sticker picker" i] { display: none; }
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
 button[id="sticker-picker-tab"] { display: none; }
@@ -220,10 +220,10 @@ a[data-list-item-id*="___library"] { display: none; }
 /*div[aria-label^="Subscriber since"], a[aria-label^="Early Supporter"] { display: none; }*/
 
 /* Server booster profile badge */
-/* div[aria-label^="Server boosting since"] { display: none; } */
+/* div[aria-label^="Server boosting since" i] { display: none; } */
 
 /* Server booster member list badge */
-/* svg[aria-label^="Server boosting since"] { display: none; } */
+/* svg[aria-label^="Server boosting since" i] { display: none; } */
 
 /* Hide all super reactions entirely */
 /* div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: none; } */
