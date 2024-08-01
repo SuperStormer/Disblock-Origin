@@ -230,3 +230,15 @@ a[data-list-item-id*="___library"] { display: none; }
 
 /* Hide "Active Now" sidebar in friends list */
 /* div[class^="nowPlayingColumn"] { display: none; } */
+
+
+/* ------------------------ */
+/* Disblock Origin branding */
+/* ------------------------ */
+
+div[class^="socialLinks"]::before {
+    content: url("data:image/svg+xml,%3Csvg width='20px' height='20px' viewBox='0 0 40 40' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cg style='display:inline;opacity:1;fill:%23cba6f7;fill-opacity:1'%3E%3Cg style='display:inline;fill:%23cba6f7;fill-opacity:1;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1'%3E%3Cpath d='M447.834 669.1c-80.631-57.032-80.631-57.032-80.631-199.61 34.556 0 46.075 0 80.63-28.515m0 228.124c80.632-57.03 80.632-57.03 80.632-199.609-34.556 0-46.075 0-80.631-28.515' style='fill:%23cba6f7;fill-opacity:1;fill-rule:nonzero;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1' transform='matrix(-.18376 0 0 .14846 102.293 -62.399)'/%3E%3C/g%3E%3C/g%3E%3Cg style='display:inline'%3E%3Cpath d='M79.544 43.453h-27.95v31.451l18.603 16.78V61.16h9.932c6.314 0 9.428 3.036 9.428 7.927v23.356c0 4.89-2.947 8.18-9.428 8.18H51.51v17.79h27.947c14.983.086 29.04-7.421 29.04-24.62V68.665c.085-17.539-13.973-25.212-28.952-25.212Z' fill='%237289da' style='fill:%23fff;fill-opacity:1;stroke-width:.749684' transform='matrix(.26458 0 0 .26458 -1.168 -1.943)'/%3E%3C/g%3E%3C/svg%3E%0A");;
+    padding-right: 5px;
+    align-self: center;
+    display: inline-block;
+}
