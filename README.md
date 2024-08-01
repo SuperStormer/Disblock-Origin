@@ -14,3 +14,6 @@ https://codeberg.org/AllPurposeMat/Disblock-Origin/raw/branch/master/DisblockOri
 
 > [!NOTE]
 > There are certain optional features at the end of the CSS you can change by uncommenting them. I am exploring ways to make these more accessible without having to change the CSS, but well here we are for now.
+
+
+To see whether Disblock Origin is properly installed, check for the logo at the bottom of the settings sidebar next to Discord's social logos, you should see a mauve Disblock Origin logo to let you know it's working.
