@@ -7,9 +7,9 @@ An ad-blocker "Theme" for Discord that hides all Nitro and "boost" upsells, alon
 
 ## Installation
 
-Use your favorite client mod (such as Vencord) to add the theme. You can copy the direct URL here:
+Use your favorite client mod (such as Vencord) to add the theme. You can use this URL, which mirrors the files on the repo:
 ```
-https://codeberg.org/AllPurposeMat/Disblock-Origin/raw/branch/master/DisblockOrigin.theme.css
+https://allpurposem.at/disblock/DisblockOrigin.theme.css
 ```
 
 > [!NOTE]
