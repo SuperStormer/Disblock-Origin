@@ -196,6 +196,7 @@ div[aria-label^="Completed a Quest" i] { display: none; }
 /* Chatbox buttons */
 button[aria-label="Open GIF picker" i] { display: none; }
 button[aria-label="Open sticker picker" i] { display: none; }
+/* div[class^="channelAppLauncher_"] { display: none; } */
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
 button[id="sticker-picker-tab"] { display: none; }
