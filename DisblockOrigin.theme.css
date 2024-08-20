@@ -1,18 +1,33 @@
 /**
  * @name Adblock for Discord
  * @author TheSunCat and contributors
- * @version 1.0.0
+ * @version 1.1.0
  * @description Hide all Nitro & Boost upsells on Discord!
  * @source https://codeberg.org/AllPurposeMat/Disblock-Origin
  */
 
+/* ----------------------------------------- */
+/* Settings. Override these in your QuickCSS */
+/* Possible values by type:
+ *  - bool: true, false
+ *  - display: none, unset
+ * NOTE: type is at the start of the name    */
+/* ----------------------------------------- */
+
+:root {
+  --display-badges: none;                         /* Nitro and Booster badges on user profiles */
+  --display-gif-button: none;                     /* GIF button in chat bar */
+  --display-sticker-buttons: none;                /* Sticker button in chat bar & emoji picker */
+  --display-app-launcher: none;                   /* App launcher right of chat bar */
+  --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
+  --display-super-reactions: unset;               /* Hide super reactions entirely */
+  --display-profile-effects: none;                /* Avatar decorations & profile effects */
+  --display-active-now: unset;                    /* Active Now column in friends list */
+}
+
 /* ------------------ */
 /* Hide Nitro upsells */
 /* ------------------ */
-
-/* Chatbox buttons */
-div[aria-label="Start an Activity" i] { display: none; }
-button[aria-label="Send a gift" i] { display: none; }
 
 /* Hide Nitro button in Home */
 a[href="/store"] { display: none; }
@@ -31,7 +46,7 @@ div[aria-label="User Settings" i] > div[aria-label="Gift Inventory" i] + div[cla
 /* Gift Inventory bottom separator */
 /*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
 
-/* Hide Hide Billing settings and separator */
+/* Hide Hide Billing header and separator */
 /*div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }*/
 /*div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] { display: none; }*/
 
@@ -164,11 +179,13 @@ div[class*="premiumDisabled_"] {display:none;}*/
 button[id="super-reaction-picker-tab"] { display: none; }
 
 /* Super reaction animation */
-div[class*="shakeReaction"] { animation: none !important; }
-div[class^="reactionInner"] > div > div[class^="effectsWrapper"] { display: none; }
-img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
-@keyframes blink-emoji {  
-  50% { opacity: 0; }
+@container style(--super-reaction-hide-anim: true) {
+  div[class*="shakeReaction"] { animation: none !important; }
+  div[class^="reactionInner"] > div > div[class^="effectsWrapper"] { display: none; }
+  img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
+  @keyframes blink-emoji {
+    50% { opacity: 0; }
+  }
 }
 
 /* Add Super Reaction menu item */
@@ -194,19 +211,20 @@ div[aria-label^="Completed a Quest" i] { display: none; }
 /* ------------------ */
 
 /* Chatbox buttons */
-button[aria-label="Open GIF picker" i] { display: none; }
-button[aria-label="Open sticker picker" i] { display: none; }
-/* div[class^="channelAppLauncher_"] { display: none; } */
+button[aria-label="Open GIF picker" i] { display: var(--display-gif-button); }
+button[aria-label="Open sticker picker" i] { display: var(--display-sticker-buttons); }
+button[aria-label="Send a gift" i] { display: none; }
+div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
-button[id="sticker-picker-tab"] { display: none; }
+button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons); }
 
 /* Avatar decorations */
-svg[class*="avatarDecoration_"] { display: none; }
-img[class^="avatarDecoration_"] { display: none; }
+svg[class*="avatarDecoration_"] { display: var(--display-profile-effects); }
+img[class^="avatarDecoration_"] { display: var(--display-profile-effects); }
 
 /* Profile effects */
-div[class^="profileEffects"] { display: none; }
+div[class^="profileEffects"] { display: var(--display-profile-effects); }
 
 /* Animated "Activities" hover effect in calls */
 /* NOTE: would be nice to disable the white hover effect,
@@ -230,19 +248,19 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { 
 a[data-list-item-id*="___library"] { display: none; }
 
 /* Nitro profile badges */
-/*div[aria-label^="Subscriber since"], div[aria-label^="Early Supporter"] { display: none; }*/
+div[aria-label^="Subscriber since"], div[aria-label^="Early Supporter"] { display: var(--display-badges); }
 
 /* Server booster profile badge */
-/* div[aria-label^="Server boosting since" i] { display: none; } */
+div[aria-label^="Server boosting since" i] { display: var(--display-badges); }
 
 /* Server booster member list badge */
-/* svg[aria-label^="Server boosting since" i] { display: none; } */
+svg[aria-label^="Server boosting since" i] { display: var(--display-badges); }
 
 /* Hide all super reactions entirely */
-/* div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: none; } */
+div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: var(--display-super-reactions); }
 
 /* Hide "Active Now" sidebar in friends list */
-/* div[class^="nowPlayingColumn"] { display: none; } */
+div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
 
 
 /* ------------------------ */
