@@ -201,7 +201,10 @@ div[class^="burstReactionTooltipPrompt"] { display: none; }
 /* --------------------------------- */
 
 /* Hide quests from the gift inventory */
-div[class^="questsContainer"] > * { display: none; }
+div[class^="container_"][style*="discovery/quest-mountain"] { display: none; }
+
+/* Hide quests tab from Discover */
+div[class^="categoryItem_"]:nth-last-of-type(2) { display: none; }
 
 /* Completed quest profile badge (doesn't provide any use so...) */
 div[aria-label^="Completed a Quest" i] { display: none; }
@@ -273,3 +276,4 @@ div[class^="socialLinks"]::before {
     align-self: center;
     display: inline-block;
 }
+
