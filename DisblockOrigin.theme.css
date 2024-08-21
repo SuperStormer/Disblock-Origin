@@ -76,11 +76,13 @@ div[class^="bannerNitroUpsell"] { display: none;}
 /* [Settings][Voice & Video] Soundboard entrance sounds */
 div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
 
-/* Appearance: Hide app icon upsell */
-div[class^="selectionGroup"]:has(div[role="radiogroup"] > div > div[class^="presets"] > [class*="appIconSelectionContainer"]) { display: none; }
+/* [Settings][Appearance] App icon and Theme upsell (old version) */
+#appearance-tab div[class^="selectionGroup"]:has(div[class*="appIconSelectionContainer"]):has(div[class*="premiumSubscribeButton_"]) { display: none; }
+#appearance-tab div[role="button"]:has(svg[class*="nitroWheel"]) { display: none;}
 
-/* Appearance: Theme upsells */
-section[class*="basicThemeSelectors_"] + section { display: none; }
+/* [Settings][Appearance] App icon and Theme upsell (new version) */
+#appearance-tab div[class*="SelectionContainer"]:has(div[class*="lockedBadgeContainer"]) { display: none;}
+#appearance-tab div[class*="description"]:has(svg[class*="nitroWheel"]) { display: none;}
 
 /* Hide message size upsells */
 div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
