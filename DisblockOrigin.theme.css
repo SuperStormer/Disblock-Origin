@@ -23,6 +23,7 @@
   --display-super-reactions: unset;               /* Hide super reactions entirely */
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
   --display-active-now: unset;                    /* Active Now column in friends list */
+  --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
 }
 
 /* ------------------ */
@@ -147,28 +148,37 @@ div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button
 div[id="guild-header-popout-premium-subscribe"] { display: none; }
 div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"]) + div[role="separator"] { display: none; }
 
-/* Server settings: Boost tab */
-div[class^="serverBoostTabItem"] { display: none; }
-div[class^="serverBoostTabItem"] + div[class^="separator"] { display: none; }
+/* Boost progress bar */
+ul[aria-label="Channels"] > li > div[data-list-item-id^="channels___boosts"] { display: none; }
 
-/* Server settings: Overview */
-div[class^="divider"]:has(div > div > div > div[class^="upsell"]) { display: none; }
+/* [Server settings][Sidebar]: Boost tab */
+div[class*="separator"]:has(+ div[class^="serverBoostTabItem"]) { display: var(--display-server-settings-boost-tab); } /* Seperator */
+div[class^="serverBoostTabItem"] { display: var(--display-server-settings-boost-tab); } /* Boost Tab */
 
-/* TODO: Hide role icon in Roles tab when we don't have boost lvl 2 */
+/* [Server settings][Sidebar]: Disable Boost tab customization */
+div[class^="serverBoostTabItem"][aria-selected=true] { background-color: var(--background-modifier-selected) !important; color: var(--interactive-active) !important;}
+div[class^="serverBoostTabItem"] svg { display: none; }
 
-/* Server settings: Stickers tab */
-/* NOTE: risky, but seems ok for now */
-div[class^="children_"] > div[class^="upsellContainer"] { display: none; }
-div[class*="tierHeaderUnlocked"] + div { display: none; }
-div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) { display: none; }
-div[class^="tierInProgress"] { display: none; }
-
-/* Server settings: Custom Invite Link tab */
+/* [Server settings][Sidebar]: Custom Invite Link tab */
+/* TODO: Tab doesn't hide for me sometimes? */
 div[aria-controls="vanity_url-tab"] { display: none; }
 button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
 
-/* Boost progress bar */
-ul[aria-label="Channels"] > li > div[data-list-item-id^="channels___boosts"] { display: none; }
+/* [Server settings][Overview]: Server Banner & Invite Background */
+#overview-tab div[class^="divider"]:has( > div > div > div[class^="upsell"]) { display: none; }
+
+/* [Server settings][Roles]: Hide role icon*/
+#roles-tab div[class^="container"]:has(div[class^="clickable"]) { display: none; }
+
+/* [Server settings][Stickers]: Hide locked tier content */
+#stickers-tab div[class^="tierHeader"] svg[class^="tierIcon"] { display: none; }
+#stickers-tab div[class^="tierHeaderLocked"]:has(svg[class*="tierLock"]) { border-radius: 8px; }
+#stickers-tab div[class^="tierHeaderLocked"]:has(svg[class*="tierLock"]) + div[class^="tierBody"] { display: none; }
+
+/* [Server settings][Boost]: Server boost ads */
+#guild_premium-tab > div[class^="divider"] { display: none; }
+#guild_premium-tab > div[class^="wrapper"] { display: none; }
+#guild_premium-tab > div[class^="tier0Container"] { display: none; }
 
 /* TODO: would be nice to hide disabled soundboard sounds & emojis
  * However, looks like it needs to be done on the JS level. This is too buggy
