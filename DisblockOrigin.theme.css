@@ -87,8 +87,9 @@ div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none
 /* Hide message size upsells */
 div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
 
-/* Hide Go Live quality upsells */
-button[class*=" selectorButtonPremiumRequired"] { display: none; }
+/* [Voice Chat][Screen Share] Hide Screen Share quality upsells */
+div[class*="qualitySettingsContainer_"] button[class*="premiumUpsell"] { display: none; }
+div[class*="qualitySettingsContainer_"] div[class*="upsellBanner_"] { display: none; }
 
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
