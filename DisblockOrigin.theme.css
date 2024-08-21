@@ -55,7 +55,7 @@ div[aria-label="User Settings" i] > div[aria-label="Gift Inventory" i] + div[cla
 div[class*="upsellOverlayContainer_"] { display: none; }
 
 /* Profiles: Choose a GIF avatar */
-div[class^="optionBox"]:has(div[class^="text-sm-semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+div[class^="optionBox"]:has(div[class^="text-sm/semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
 
 /* Profiles: Change decorations exclusive to Nitro */
 div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
@@ -67,12 +67,12 @@ div[class^="premiumFeatureBorder"] { display: none; }
 /* Profiles: New style ad */
 #profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
 
-/* Profiles: Per server avatar */
-div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] { display: none; }
-div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] + div[class^="imageUploaderIcon"]{ display: none; }
+/* [Settings][Profiles]: Per server avatar */
+#profile-customization-tab div[class^="avatar_"]:has(path[d="M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"])  { pointer-events: none;}
+#profile-customization-tab div[class^="avatar_"]:has(path[d="M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"]) rect[class^="pointerEvents_"]  { pointer-events: none;}
 
-/* Profiles: Hide profile customization ad in banners */
-div[class^="bannerNitroUpsell"] { display: none;}
+/* [Settings][Profiles]: Hide profile customization ad in banner preview */
+#profile-customization-tab svg[class^="bannerSVGWrapper"] div[class*="clickable"] { display: none;}
 
 /* [Settings][Voice & Video] Soundboard entrance sounds */
 div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
