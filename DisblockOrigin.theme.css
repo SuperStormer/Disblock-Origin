@@ -43,13 +43,13 @@ a[href="/store"] { display: none; }
 a[href="/shop"] { display: none; }
 
 /* [Settings][Sidebar] Hide Nitro tabs */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
 div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div + div + div { display: var(--display-settings-billing-header); } /* Seperator */
 
 /* [Settings][Sidebar] Disable Nitro tab customization (for search) */
 div[class*="premiumTab"] div[class*="premiumLabel"] svg { display: none; }
