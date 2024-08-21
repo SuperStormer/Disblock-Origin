@@ -73,8 +73,8 @@ div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] + div[class^=
 /* Profiles: Hide profile customization ad in banners */
 div[class^="bannerNitroUpsell"] { display: none;}
 
-/* Voice & Video: Soundboard section */
-div[class^="container"]:has(div[class^="children"] > div[class^="soundboardRow"]) { display: none; }
+/* [Settings][Voice & Video] Soundboard entrance sounds */
+div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
 
 /* Appearance: Hide app icon upsell */
 div[class^="selectionGroup"]:has(div[role="radiogroup"] > div > div[class^="presets"] > [class*="appIconSelectionContainer"]) { display: none; }
