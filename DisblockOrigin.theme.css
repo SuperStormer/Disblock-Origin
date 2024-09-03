@@ -168,12 +168,12 @@ button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
 #overview-tab div[class^="divider"]:has( > div > div > div[class^="upsell"]) { display: none; }
 
 /* [Server settings][Roles]: Hide role icon*/
-#roles-tab div[class^="container"]:has(div[class^="clickable"]) { display: none; }
+#roles-tab div[class^="container"]:has(div[class^="clickable"]):has(div[class^="availabilityIndicator"]) { display: none; }
 
 /* [Server settings][Stickers]: Hide locked tier content */
-#stickers-tab div[class^="tierHeader"] svg[class^="tierIcon"] { display: none; }
-#stickers-tab div[class^="tierHeaderLocked"]:has(svg[class*="tierLock"]) { border-radius: 8px; }
-#stickers-tab div[class^="tierHeaderLocked"]:has(svg[class*="tierLock"]) + div[class^="tierBody"] { display: none; }
+#stickers-tab div[class*="tierHeader"] svg[class^="tierIcon"] { display: none; }
+#stickers-tab div[class*="tierHeader"]:has(svg[class*="tierLock"]) { border-radius: 8px; }
+#stickers-tab div[class*="tierHeader"]:has(svg[class*="tierLock"]) + div[class^="tierBody"] { display: none; }
 
 /* [Server settings][Boost]: Server boost ads */
 #guild_premium-tab > div[class^="divider"] { display: none; }
