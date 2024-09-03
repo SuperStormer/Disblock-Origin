@@ -72,7 +72,7 @@ div[class^="premiumFeatureBorder"] { display: none; }
 #profile-customization-tab div[class^="avatar_"]:has(path[d="M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"]) rect[class^="pointerEvents_"]  { pointer-events: none;}
 
 /* [Settings][Profiles]: Hide profile customization ad in banner preview */
-#profile-customization-tab svg[class^="bannerSVGWrapper"] div[class*="clickable"] { display: none;}
+#profile-customization-tab foreignObject div[role="button"]:has(path[d^="M15 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"]) { display: none;}
 
 /* [Settings][Voice & Video] Soundboard entrance sounds */
 div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
