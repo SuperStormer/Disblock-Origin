@@ -224,6 +224,9 @@ div[aria-label^="Completed a Quest" i] { display: none; }
 /* General annoyances */
 /* ------------------ */
 
+/* Friends activity history */
+h3[class^="membersGroup_"]:has(span[class^="headerContainer_"]) { display: none; }
+
 /* Chatbox buttons */
 button[aria-label="Open GIF picker" i] { display: var(--display-gif-button); }
 button[aria-label="Open sticker picker" i] { display: var(--display-sticker-buttons); }
