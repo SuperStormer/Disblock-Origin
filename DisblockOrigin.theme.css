@@ -24,6 +24,13 @@
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
   --display-active-now: unset;                    /* Active Now column in friends list */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
+
+  --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
+  --display-settings-nitro-tab: none;             /* Settings menu Nitro tab */
+  --display-settings-server-boost-tab: none;      /* Settings menu Server Boost tab */
+  --display-settings-subscriptions-tab: none;     /* Settings menu Subscriptions tab */
+  --display-settings-gift-inventory-tab: unset;   /* Settings menu Gift Inventory tab */
+  --display-settings-billing-tab: none;           /* Settings menu Billing tab */
 }
 
 /* ------------------ */
@@ -36,20 +43,27 @@ a[href="/store"] { display: none; }
 /* Hide shop button in Home */
 a[href="/shop"] { display: none; }
 
-/* Hide Nitro tabs in Settings */
-div[aria-label="User Settings" i] > div[aria-label="Nitro" i] + div { display: none; }
-div[aria-label="User Settings" i] > div[aria-label="Nitro" i] { display: none; }
-div[aria-label="User Settings" i] > div[aria-label="Subscriptions" i] { display: none; }
-div[aria-label="User Settings" i] > div[aria-label="Gift Inventory" i] + div[class^="item_"] { display: none; } /* Billing tab */
+/* [Settings][Sidebar] Hide Nitro tabs (old version without search) */
+div[role="tablist"]:not(:has(input)) > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
+div[role="tablist"]:not(:has(input)) > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
 
-/* Hide Gift Inventory tab in Settings */
-/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] { display: none; }*/
-/* Gift Inventory bottom separator */
-/*div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] + div[class^="item_"] + div[class^="separator"] { display: none; }*/
+/* [Settings][Sidebar] Hide Nitro tabs (new version with search) */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
 
-/* Hide Hide Billing header and separator */
-/*div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] + div[class^="header_"] { display: none; }*/
-/*div[aria-label="User Settings"] > div[aria-label="Clips"] + div[class^="item_"] + div[class^="separator_"] { display: none; }*/
+/* [Settings][Sidebar] Disable Nitro tab customization (for search) */
+div[class*="premiumTab"] div[class*="premiumLabel"] svg { display: none; }
+div[class*="premiumTab"] div[class*="background"] { display: none; }
 
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
