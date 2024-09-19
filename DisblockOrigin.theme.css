@@ -154,6 +154,9 @@ div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop" i]) { disp
 /* Friend panel nitro upsell */
 div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button"])  { display: none; }
 
+/* Hide "sneak peek" upsell banner */
+div[class*="notice"][class*="colorPremium"] { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
