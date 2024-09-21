@@ -209,14 +209,15 @@ div[class*="premiumDisabled_"] {display:none;}*/
 button[id="super-reaction-picker-tab"] { display: none; }
 
 /* Super reaction animation */
-@container style(--super-reaction-hide-anim: true) {
+@container style(--bool-super-reaction-hide-anim: true) {
   div[class*="shakeReaction"] { animation: none !important; }
-  div[class^="reactionInner"] > div > div[class^="effectsWrapper"] { display: none; }
+  div[class^="reactionInner"] div[class^="effectsWrapper"] { display: none; }
   img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
   @keyframes blink-emoji {
     50% { opacity: 0; }
   }
 }
+
 
 /* Add Super Reaction menu item */
 #message-add-reaction-1 { display: none; }
