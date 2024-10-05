@@ -127,8 +127,8 @@ div[class^=tooltipPremiumContent] { display: none; }
 /* Emoji autocomplete upsell (wowww this stoops low, even for them) */
 div[class^="nitroTopDividerContainer"], div[class^="nitroTopDividerContainer"] ~ div { display: none; }
 
-/* Hide the 'Unlock these emoji with Nitro' in emoji picker */
-div[class^=upsellContainer] { display: none; }
+/* Hide the 'Unlock every emoji with Nitro' in emoji picker */
+div[class^=emojiPickerListWrapper] div[class^=upsellContainer] { display: none; }
 
 /* Remove the purple background in the emoji picker and autocomplete */
 div[class*=categorySectionNitroLocked] { background-color: unset !important; }
