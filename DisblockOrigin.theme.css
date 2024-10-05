@@ -148,9 +148,6 @@ div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEm
 /* Grayscale for emoji that are simply locked and not in the Nitro section */
 button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(1); }
 
-/* Avatar decorations upsell */
-div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop" i]) { display: none; }
-
 /* Friend panel nitro upsell */
 div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button"])  { display: none; }
 
@@ -166,7 +163,7 @@ div[id="guild-header-popout-premium-subscribe"] { display: none; }
 div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"]) + div[role="separator"] { display: none; }
 
 /* Boost progress bar */
-ul[aria-label="Channels"] > li > div[data-list-item-id^="channels___boosts"] { display: none; }
+#channels > ul > li > div[data-list-item-id^="channels___boosts"] { display: none; }
 
 /* [Server settings][Sidebar]: Boost tab */
 div[class*="separator"]:has(+ div[class^="serverBoostTabItem"]) { display: var(--display-server-settings-boost-tab); } /* Seperator */
@@ -238,16 +235,16 @@ div[class^="container_"][style*="discovery/quest-mountain"] { display: none; }
 div[class^="categoryItem_"]:nth-last-of-type(2) { display: none; }
 
 /* Completed quest profile badge (doesn't provide any use so...) */
-div[aria-label^="Completed a Quest" i] { display: none; }
+div[role="group"] > div:has(a[href*="quests"]) { display: none; }
 
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
 
 /* Chatbox buttons */
-button[aria-label="Open GIF picker" i] { display: var(--display-gif-button); }
-button[aria-label="Open sticker picker" i] { display: var(--display-sticker-buttons); }
-button[aria-label="Send a gift" i] { display: none; }
+div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerButton_"])):not(:has(button[class*=" emojiButton_"])) { display: var(--display-gif-button); } /* Open GIF picker */
+div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons); } /* Open sticker picker */
+div[class^="channelTextArea_"] div[class^="buttons_"] > div[class^="container"]:has(div[class^="giftIconButton"]) { display: none; } /* Send a gift */
 div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
@@ -269,29 +266,26 @@ div[aria-labelledby^="vc-activities"] { display: none; }
 div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
 
 /* Hide Help button */
-div[aria-label="Help"] { display: none; }
+div[class^="toolbar_"] > a[href*="support.discord.com"] { display: none; }
 
 /* Hide explore servers button */
-div[aria-label="Servers"] + div + div { display: none; }
+div[class^="footer"]:has([data-list-item-id="guildsnav___guild-discover-button"]) { display: none; }
 
 /* Hide download button in web version */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div { display: none; } /* separator */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { display: none; } /* button & click target */
+div[class^="listItem_"]:has(div[class^="guildSeparator_"]):has( + div[class^="listItem_"] [data-list-item-id=guildsnav___app-download-button]) { display: none; } /* separator */
+div[class^="listItem_"]:has([data-list-item-id=guildsnav___app-download-button]) { display: none; } /* button & click target */
 
 /* Hide Library button in Home */
 a[data-list-item-id*="___library"] { display: none; }
 
-/* Nitro profile badges */
-div[aria-label^="Subscriber since"], div[aria-label^="Early Supporter"] { display: var(--display-badges); }
-
-/* Server booster profile badge */
-div[aria-label^="Server boosting since" i] { display: var(--display-badges); }
+/* Nitro and server booster profile badge */
+div[role="group"] > div:has(a[href*="premium"]) { display: var(--display-badges); }
 
 /* Server booster member list badge */
-svg[aria-label^="Server boosting since" i] { display: var(--display-badges); }
+div[class^="nameAndDecorators_"] > div:has(svg[class^="premiumIcon_"]) { display: var(--display-badges); }
 
 /* Hide all super reactions entirely */
-div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: var(--display-super-reactions); }
+div[id*="message-reactions"] div:has( > div[class^="reaction_"] > div[class^="reactionInner_"] > div:first-child:not([class=""])) { display: var(--display-super-reactions); }
 
 /* Hide "Active Now" sidebar in friends list */
 div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
@@ -307,4 +301,3 @@ div[class^="socialLinks"]::before {
     align-self: center;
     display: inline-block;
 }
-
