@@ -248,6 +248,9 @@ button[aria-label="Open sticker picker" i] { display: var(--display-sticker-butt
 button[aria-label="Send a gift" i] { display: none; }
 div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 
+/* Edit image with Apps on image hover */
+div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
+
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
 button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons); }
 
