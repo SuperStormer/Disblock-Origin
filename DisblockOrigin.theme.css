@@ -220,9 +220,7 @@ button[id="super-reaction-picker-tab"] { display: none; }
 
 
 /* Add Super Reaction menu item */
-#message-add-reaction-1 { display: none; }
-#message-actions-add-reaction-1 { display: none; }
-div[aria-label="Add Super Reaction" i] { display: none; }
+div[class^=burstToggle] { display: none; }
 
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
