@@ -271,6 +271,7 @@ div[class^="toolbar_"] > a[href*="support.discord.com"] { display: none; }
 
 /* Hide explore servers button */
 div[class^="footer"]:has([data-list-item-id="guildsnav___guild-discover-button"]) { display: none; }
+div[class*="unreadMentionsFixedFooter"] { bottom: 0; } /* Removed unread mentions indicator footer offset */
 
 /* Hide download button in web version */
 div[class^="listItem_"]:has(div[class^="guildSeparator_"]):has( + div[class^="listItem_"] [data-list-item-id=guildsnav___app-download-button]) { display: none; } /* separator */
