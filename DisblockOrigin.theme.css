@@ -298,8 +298,19 @@ div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
 /* ------------------------ */
 
 div[class^="socialLinks"]::before {
-    content: url("data:image/svg+xml,%3Csvg width='20px' height='20px' viewBox='0 0 40 40' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cg style='display:inline;opacity:1;fill:%23cba6f7;fill-opacity:1'%3E%3Cg style='display:inline;fill:%23cba6f7;fill-opacity:1;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1'%3E%3Cpath d='M447.834 669.1c-80.631-57.032-80.631-57.032-80.631-199.61 34.556 0 46.075 0 80.63-28.515m0 228.124c80.632-57.03 80.632-57.03 80.632-199.609-34.556 0-46.075 0-80.631-28.515' style='fill:%23cba6f7;fill-opacity:1;fill-rule:nonzero;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1' transform='matrix(-.18376 0 0 .14846 102.293 -62.399)'/%3E%3C/g%3E%3C/g%3E%3Cg style='display:inline'%3E%3Cpath d='M79.544 43.453h-27.95v31.451l18.603 16.78V61.16h9.932c6.314 0 9.428 3.036 9.428 7.927v23.356c0 4.89-2.947 8.18-9.428 8.18H51.51v17.79h27.947c14.983.086 29.04-7.421 29.04-24.62V68.665c.085-17.539-13.973-25.212-28.952-25.212Z' fill='%237289da' style='fill:%23fff;fill-opacity:1;stroke-width:.749684' transform='matrix(.26458 0 0 .26458 -1.168 -1.943)'/%3E%3C/g%3E%3C/svg%3E%0A");;
-    padding-right: 5px;
-    align-self: center;
+    content: "";
     display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0 2px;
+    margin-right: 8px;
+    background-color: var(--interactive-normal);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='16' height='16' viewBox='0 0 40 40'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' fill='currentColor' d='M19.999 36.936C34.816 28.469 34.816 28.469 34.816 7.3c-6.35 0-8.467 0-14.817-4.233m0 33.867C5.182 28.47 5.182 28.47 5.182 7.301c6.35 0 8.467 0 14.817-4.233ZM19.878 9.554h-7.395v8.321l4.922 4.44v-8.076h2.628c1.67 0 2.494.803 2.494 2.097v6.18c0 1.293-.78 2.164-2.494 2.164H12.46v4.707h7.394c3.964.022 7.683-1.964 7.683-6.514v-6.649c.023-4.64-3.697-6.67-7.66-6.67Z'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+}
+
+nav[class^="sidebar"] div[class^="info_"] > span:last-child::after {
+    content: "Ads blocked by Disblock Origin";
+    display: block;
 }
