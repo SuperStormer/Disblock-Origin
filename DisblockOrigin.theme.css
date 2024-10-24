@@ -233,7 +233,7 @@ div[class^="container_"][style*="discovery/quest-mountain"] { display: none; }
 div[class^="categoryItem_"]:nth-last-of-type(2) { display: none; }
 
 /* Completed quest profile badge (doesn't provide any use so...) */
-div[role="group"] > div:has(a[href*="quests"]) { display: none; }
+div[role="group"] > div > a[href="https://discord.com/discovery/quests"] { display: none; }
 
 /* ------------------ */
 /* General annoyances */
