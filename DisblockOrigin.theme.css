@@ -233,7 +233,7 @@ div[class^="container_"][style*="discovery/quest-mountain"] { display: none; }
 div[class^="categoryItem_"]:nth-last-of-type(2) { display: none; }
 
 /* Completed quest profile badge (doesn't provide any use so...) */
-div[role="group"] > div > a[href="https://discord.com/discovery/quests"] { display: none; }
+div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery/quests"] { display: none; }
 
 /* ------------------ */
 /* General annoyances */
@@ -281,7 +281,7 @@ div[class^="listItem_"]:has([data-list-item-id=guildsnav___app-download-button])
 a[data-list-item-id*="___library"] { display: none; }
 
 /* Nitro and server booster profile badge */
-div[role="group"] > div:has(a[href*="premium"]) { display: var(--display-badges); }
+div[class^=tags] div[role="group"] > div:has(a[href*="/settings/premium"]) { display: var(--display-badges); }
 
 /* Server booster member list badge */
 div[class^="nameAndDecorators_"] > div:has(svg[class^="premiumIcon_"]) { display: var(--display-badges); }
