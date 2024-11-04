@@ -242,7 +242,7 @@ div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery
 /* Chatbox buttons */
 div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerButton_"])):not(:has(button[class*=" emojiButton_"])) { display: var(--display-gif-button); } /* Open GIF picker */
 div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons); } /* Open sticker picker */
-div[class^="channelTextArea_"] div[class^="buttons_"] > div[class^="container"]:has(div[class^="giftIconButton"]) { display: none; } /* Send a gift */
+div[class^="channelTextArea_"] div[class^="buttons_"] > button[type="button"] { display: none; } /* Send a gift */
 div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 
 /* Edit image with Apps on image hover */
