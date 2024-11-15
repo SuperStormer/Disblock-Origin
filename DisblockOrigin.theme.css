@@ -15,21 +15,22 @@
 /* ----------------------------------------- */
 
 :root {
-  --display-badges: none;                         /* Nitro and Booster badges on user profiles */
-  --display-gif-button: none;                     /* GIF button in chat bar */
-  --display-sticker-buttons: none;                /* Sticker button in chat bar & emoji picker */
-  --display-app-launcher: none;                   /* App launcher right of chat bar */
-  --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
-  --display-super-reactions: unset;               /* Hide super reactions entirely */
-  --display-profile-effects: none;                /* Avatar decorations & profile effects */
-  --display-active-now: unset;                    /* Active Now column in friends list */
+    --display-badges: none; /* Nitro and Booster badges on user profiles */
+    --display-gif-button: none; /* GIF button in chat bar */
+    --display-sticker-buttons: none; /* Sticker button in chat bar & emoji picker */
+    --display-app-launcher: none; /* App launcher right of chat bar */
+    --bool-super-reaction-hide-anim: true; /* Replace Super Reactions with a blink animation */
+    --display-super-reactions: unset; /* Hide super reactions entirely */
+    --display-profile-effects: none; /* Avatar decorations & profile effects */
+    --display-active-now: unset; /* Active Now column in friends list */
+    --display-server-settings-boost-tab: none; /* Server settings menu Boost tab */
 
-  --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
-  --display-settings-nitro-tab: none;             /* Settings menu Nitro tab */
-  --display-settings-server-boost-tab: none;      /* Settings menu Server Boost tab */
-  --display-settings-subscriptions-tab: none;     /* Settings menu Subscriptions tab */
-  --display-settings-gift-inventory-tab: unset;   /* Settings menu Gift Inventory tab */
-  --display-settings-billing-tab: none;           /* Settings menu Billing tab */
+    --display-settings-billing-header: unset; /* Settings menu Billing Settings header */
+    --display-settings-nitro-tab: none; /* Settings menu Nitro tab */
+    --display-settings-server-boost-tab: none; /* Settings menu Server Boost tab */
+    --display-settings-subscriptions-tab: none; /* Settings menu Subscriptions tab */
+    --display-settings-gift-inventory-tab: unset; /* Settings menu Gift Inventory tab */
+    --display-settings-billing-tab: none; /* Settings menu Billing tab */
 }
 
 /* ------------------ */
@@ -37,149 +38,322 @@
 /* ------------------ */
 
 /* Hide Nitro button in Home */
-a[href="/store"] { display: none; }
+a[href="/store"] {
+    display: none;
+}
 
 /* Hide shop button in Home */
-a[href="/shop"] { display: none; }
+a[href="/shop"] {
+    display: none;
+}
 
 /* [Settings][Sidebar] Hide Nitro tabs (old version without search) */
-div[role="tablist"]:not(:has(input)) > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
-div[role="tablist"]:not(:has(input)) > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
-div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
-div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
-div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
-div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
-div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
+div[role="tablist"]:not(:has(input))
+    > div[class*="separator_"]:has(
+        + div[class*="header_"] + div[class*="premiumTab_"]
+    ) {
+    display: var(--display-settings-billing-header);
+} /* Seperator */
+div[role="tablist"]:not(:has(input))
+    > div[class*="header_"]:has(+ div[class*="premiumTab_"]) {
+    display: var(--display-settings-billing-header);
+} /* Billing Settings header */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] {
+    display: var(--display-settings-nitro-tab);
+} /* Nitro */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div {
+    display: var(--display-settings-server-boost-tab);
+} /* Server Boost */
+div[role="tablist"]:not(:has(input)) > div[class*="premiumTab_"] + div + div {
+    display: var(--display-settings-subscriptions-tab);
+} /* Subscriptions */
+div[role="tablist"]:not(:has(input))
+    > div[class*="premiumTab_"]
+    + div
+    + div
+    + div {
+    display: var(--display-settings-gift-inventory-tab);
+} /* Gift Inventory */
+div[role="tablist"]:not(:has(input))
+    > div[class*="premiumTab_"]
+    + div
+    + div
+    + div
+    + div {
+    display: var(--display-settings-billing-tab);
+} /* Billing */
 
 /* [Settings][Sidebar] Hide Nitro tabs (new version with search) */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
-div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="separator_"]:has(
+        + div[class*="header_"] + div[class*="premiumTab_"]
+    ) {
+    display: var(--display-settings-billing-header);
+} /* Seperator */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="header_"]:has(+ div[class*="premiumTab_"]) {
+    display: var(--display-settings-billing-header);
+} /* Billing Settings header */
+div[role="tablist"]:has(input:placeholder-shown) > div[class*="premiumTab_"] {
+    display: var(--display-settings-nitro-tab);
+} /* Nitro */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="premiumTab_"]
+    + div {
+    display: var(--display-settings-server-boost-tab);
+} /* Server Boost */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="premiumTab_"]
+    + div
+    + div {
+    display: var(--display-settings-subscriptions-tab);
+} /* Subscriptions */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="premiumTab_"]
+    + div
+    + div
+    + div {
+    display: var(--display-settings-gift-inventory-tab);
+} /* Gift Inventory */
+div[role="tablist"]:has(input:placeholder-shown)
+    > div[class*="premiumTab_"]
+    + div
+    + div
+    + div
+    + div {
+    display: var(--display-settings-billing-tab);
+} /* Billing */
 
 /* [Settings][Sidebar] Disable Nitro tab customization (for search) */
-div[class*="premiumTab"] div[class*="premiumLabel"] svg { display: none; }
-div[class*="premiumTab"] div[class*="background"] { display: none; }
+div[class*="premiumTab"] div[class*="premiumLabel"] svg {
+    display: none;
+}
+div[class*="premiumTab"] div[class*="background"] {
+    display: none;
+}
 
 /* Server Profiles: Make unique profiles for each server box */
-div[class*="upsellOverlayContainer_"] { display: none; }
+div[class*="upsellOverlayContainer_"] {
+    display: none;
+}
 
 /* Profiles: Choose a GIF avatar */
-div[class^="optionBox"]:has(div[class^="text-sm-semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+div[class^="optionBox"]:has(
+        div[class^="text-sm-semibold"]
+            > div[class^="optionBoxText"]
+            > div[class^="optionBoxDescription"]
+            > div[class^="nitroWheelFlairContainer"]
+    ) {
+    display: none;
+}
 
 /* Profiles: Change decorations exclusive to Nitro */
-div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
-div[class*="effectGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Effects */
+div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) {
+    display: none;
+} /* Decorations */
+div[class*="effectGridItem"]:has(div[class*="iconBadge"]) {
+    display: none;
+} /* Effects */
 
 /* Profiles: Try out Nitro! box */
-div[class^="premiumFeatureBorder"] { display: none; }
+div[class^="premiumFeatureBorder"] {
+    display: none;
+}
 
 /* Profiles: New style ad */
-#profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
+#profile-customization-tab
+    > div[class^="container"]:has(button[class*="colorBrand"]) {
+    display: none;
+}
 
 /* Profiles: Per server avatar */
-div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] { display: none; }
-div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] + div[class^="imageUploaderIcon"]{ display: none; }
+div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] {
+    display: none;
+}
+div[class^="imageUploaderInner"]
+    + div[class^="imageUploaderHint"]
+    + div[class^="imageUploaderIcon"] {
+    display: none;
+}
 
 /* Profiles: Hide profile customization ad in banners */
-div[class^="bannerNitroUpsell"] { display: none;}
+div[class^="bannerNitroUpsell"] {
+    display: none;
+}
 
 /* Voice & Video: Soundboard section */
-div[class^="container"]:has(div[class^="children"] > div[class^="soundboardRow"]) { display: none; }
+div[class^="container"]:has(
+        div[class^="children"] > div[class^="soundboardRow"]
+    ) {
+    display: none;
+}
 
 /* Appearance: Hide app icon upsell */
-div[class^="selectionGroup"]:has(div[role="radiogroup"] > div > div[class^="presets"] > [class*="appIconSelectionContainer"]) { display: none; }
+div[class^="selectionGroup"]:has(
+        div[role="radiogroup"]
+            > div
+            > div[class^="presets"]
+            > [class*="appIconSelectionContainer"]
+    ) {
+    display: none;
+}
 
 /* Appearance: Theme upsells */
-section[class*="basicThemeSelectors_"] + section { display: none; }
+section[class*="basicThemeSelectors_"] + section {
+    display: none;
+}
 
 /* Hide message size upsells */
-div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
+div[class^="characterCount"] > div[class*=" upsell_"] {
+    display: none;
+}
 
 /* Hide Go Live quality upsells */
-button[class*=" selectorButtonPremiumRequired"] { display: none; }
+button[class*=" selectorButtonPremiumRequired"] {
+    display: none;
+}
 
 /* Hide ad in profile banners */
-div[class^="premiumIconWrapper"] { display: none; }
+div[class^="premiumIconWrapper"] {
+    display: none;
+}
 
 /* Hide "Level up your look" ad in account profile popout */
-div[class*="hasCollectiblesUpsell"] > div[class ^="userPopoutInner"] > div[class*="animation_"] { display: none; }
+div[class*="hasCollectiblesUpsell"]
+    > div[class^="userPopoutInner"]
+    > div[class*="animation_"] {
+    display: none;
+}
 
 /* Hide "Gift Nitro" button in DM User Profile sidebar */
-button[class*=" giftButton"] { display: none; }
+button[class*=" giftButton"] {
+    display: none;
+}
 
 /* Emoji popout: "Get nitro" button */
-button[class^=shinyButton]:has(div[class*=premiumSubscribeButton]) { display: none; }
+button[class^="shinyButton"]:has(div[class*="premiumSubscribeButton"]) {
+    display: none;
+}
 
 /* Emoji popout: "Powered by nitro" text */
-div[class^=nitroTextAndBadge] { display: none; }
+div[class^="nitroTextAndBadge"] {
+    display: none;
+}
 
 /* Hide "Custom emojis" Nitro text from hover tooltip */
-div[class^=tooltipPremiumContent] { display: none; }
+div[class^="tooltipPremiumContent"] {
+    display: none;
+}
 
 /* Emoji autocomplete upsell (wowww this stoops low, even for them) */
-div[class^="nitroTopDividerContainer"], div[class^="nitroTopDividerContainer"] ~ div { display: none; }
+div[class^="nitroTopDividerContainer"],
+div[class^="nitroTopDividerContainer"] ~ div {
+    display: none;
+}
 
-/* Hide the 'Unlock these emoji with Nitro' in emoji picker */
-div[class^=upsellContainer] { display: none; }
+/* Hide the 'Unlock every emoji with Nitro' in emoji picker */
+div[class^="emojiPickerListWrapper"] div[class^="upsellContainer"] {
+    display: none;
+}
 
 /* Remove the purple background in the emoji picker and autocomplete */
-div[class*=categorySectionNitroLocked] { background-color: unset !important; }
+div[class*="categorySectionNitroLocked"] {
+    background-color: unset !important;
+}
 
 /* Remove the purple divider at the bottom of the emoji picker*/
-div[class^=nitroBottomDivider] { display: none; }
+div[class^="nitroBottomDivider"] {
+    display: none;
+}
 
 /* Hide the lock icon on servers icon in the emoji picker */
-div[class^=categoryItemLockIconContainer] { display: none; }
+div[class^="categoryItemLockIconContainer"] {
+    display: none;
+}
 
 /* Hide the lock icon on emoji in the emoji picker */
-div[class^=emojiLockIconContainer] { display: none; }
+div[class^="emojiLockIconContainer"] {
+    display: none;
+}
 
 /* Restore old grayscale filter on Nitro emojis so you don't accidentally click them and get an ad */
-div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEmoji"] { filter: grayscale(1); }
+div[class*="categorySectionNitroLocked"]
+    > ul
+    > li
+    > button
+    > img[class^="lockedEmoji"] {
+    filter: grayscale(1);
+}
 
 /* Grayscale for emoji that are simply locked and not in the Nitro section */
-button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(1); }
-
-/* Avatar decorations upsell */
-div[class*="userProfileInner_"] > div:has(div[aria-label="Go to Shop" i]) { display: none; }
+button:has(div[class^="emojiLockIconContainer"]) {
+    filter: grayscale(1);
+}
 
 /* Friend panel nitro upsell */
-div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button"])  { display: none; }
+div[class*="overlayBackground_"]:has(
+        div[class*="contentText_"] > a[role="button"]
+    ) {
+    display: none;
+}
+
+/* Hide "sneak peek" upsell banner */
+div[class*="notice"][class*="colorPremium"] {
+    display: none;
+}
 
 /* ------------- */
 /* Server boosts */
 /* ------------- */
 
 /* Server Boost button in top left dropdown */
-div[id="guild-header-popout-premium-subscribe"] { display: none; }
-div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"]) + div[role="separator"] { display: none; }
+div[id="guild-header-popout-premium-subscribe"] {
+    display: none;
+}
+div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"])
+    + div[role="separator"] {
+    display: none;
+}
 
-/* Server settings: Boost tab */
-div[class^="serverBoostTabItem"] { display: none; }
-div[class^="serverBoostTabItem"] + div[class^="separator"] { display: none; }
+/* Boost progress bar */
+#channels > ul > li > div[data-list-item-id^="channels___boosts"] {
+    display: none;
+}
 
 /* Server settings: Overview */
-div[class^="divider"]:has(div > div > div > div[class^="upsell"]) { display: none; }
+div[class^="divider"]:has(div > div > div > div[class^="upsell"]) {
+    display: none;
+}
 
 /* TODO: Hide role icon in Roles tab when we don't have boost lvl 2 */
 
 /* Server settings: Stickers tab */
 /* NOTE: risky, but seems ok for now */
-div[class^="children_"] > div[class^="upsellContainer"] { display: none; }
-div[class*="tierHeaderUnlocked"] + div { display: none; }
-div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) { display: none; }
-div[class^="tierInProgress"] { display: none; }
+div[class^="children_"] > div[class^="upsellContainer"] {
+    display: none;
+}
+div[class*="tierHeaderUnlocked"] + div {
+    display: none;
+}
+div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) {
+    display: none;
+}
+div[class^="tierInProgress"] {
+    display: none;
+}
 
 /* Server settings: Custom Invite Link tab */
-div[aria-controls="vanity_url-tab"] { display: none; }
-button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
+div[aria-controls="vanity_url-tab"] {
+    display: none;
+}
+button[class^="shinyButton"]:has(div[class*="upsellButton"]) {
+    display: none;
+}
 
 /* Boost progress bar */
-ul[aria-label="Channels"] > li > div[data-list-item-id^="channels___boosts"] { display: none; }
+ul[aria-label="Channels"] > li > div[data-list-item-id^="channels___boosts"] {
+    display: none;
+}
 
 /* TODO: would be nice to hide disabled soundboard sounds & emojis
  * However, looks like it needs to be done on the JS level. This is too buggy
@@ -190,103 +364,193 @@ div[class*="premiumDisabled_"] {display:none;}*/
 /* --------------- */
 
 /* Super reactions button */
-button[id="super-reaction-picker-tab"] { display: none; }
+button[id="super-reaction-picker-tab"] {
+    display: none;
+}
 
 /* Super reaction animation */
-@container style(--super-reaction-hide-anim: true) {
-  div[class*="shakeReaction"] { animation: none !important; }
-  div[class^="reactionInner"] > div > div[class^="effectsWrapper"] { display: none; }
-  img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
-  @keyframes blink-emoji {
-    50% { opacity: 0; }
-  }
+@container style(--bool-super-reaction-hide-anim: true) {
+    div[class*="shakeReaction"] {
+        animation: none !important;
+    }
+    div[class^="reactionInner"] div[class^="effectsWrapper"] {
+        display: none;
+    }
+    img[class*="hideEmoji"] {
+        animation: blink-emoji 1s linear infinite;
+        opacity: 255;
+    }
+    @keyframes blink-emoji {
+        50% {
+            opacity: 0;
+        }
+    }
 }
 
 /* Add Super Reaction menu item */
-#message-add-reaction-1 { display: none; }
-#message-actions-add-reaction-1 { display: none; }
-div[aria-label="Add Super Reaction" i] { display: none; }
+div[class^="burstToggle"] {
+    display: none;
+}
 
 /* Upsell when hovering a Super Reaction */
-div[class^="burstReactionTooltipPrompt"] { display: none; }
+div[class^="burstReactionTooltipPrompt"] {
+    display: none;
+}
 
 /* --------------------------------- */
 /* Quests (straight up paid ads lol) */
 /* --------------------------------- */
 
 /* Hide quests from the gift inventory */
-div[class^="questsContainer"] > * { display: none; }
+div[class^="questsContainer"] > * {
+    display: none;
+}
 
 /* Completed quest profile badge (doesn't provide any use so...) */
-div[aria-label^="Completed a Quest" i] { display: none; }
+div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery/quests"]
+{
+    display: none;
+}
 
 /* ------------------ */
 /* General annoyances */
 /* ------------------ */
 
 /* Friends activity history */
-h3[class^="membersGroup_"]:has(span[class^="headerContainer_"]) { display: none; }
+h3[class^="membersGroup_"]:has(span[class^="headerContainer_"]) {
+    display: none;
+}
 
 /* Chatbox buttons */
-button[aria-label="Open GIF picker" i] { display: var(--display-gif-button); }
-button[aria-label="Open sticker picker" i] { display: var(--display-sticker-buttons); }
-button[aria-label="Send a gift" i] { display: none; }
-div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
+div[class^="expression-picker-chat-input-button"]:not(
+        :has(div[class*=" stickerButton_"])
+    ):not(:has(button[class*=" emojiButton_"])) {
+    display: var(--display-gif-button);
+} /* Open GIF picker */
+div[class^="expression-picker-chat-input-button"]:has(
+        div[class*=" stickerButton_"]
+    ) {
+    display: var(--display-sticker-buttons);
+} /* Open sticker picker */
+div[class^="channelTextArea_"] div[class^="buttons_"] > button[type="button"] {
+    display: none;
+} /* Send a gift */
+div[class^="channelAppLauncher_"] {
+    display: var(--display-app-launcher);
+}
+
+/* Edit image with Apps on image hover */
+div[class^="imageContainer_"]
+    div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) {
+    display: none;
+}
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
-button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons); }
+button[id="sticker-picker-tab"] {
+    display: var(--display-sticker-buttons);
+}
 
 /* Avatar decorations */
-svg[class*="avatarDecoration_"] { display: var(--display-profile-effects); }
-img[class^="avatarDecoration_"] { display: var(--display-profile-effects); }
+svg[class*="avatarDecoration_"] {
+    display: var(--display-profile-effects);
+}
+img[class^="avatarDecoration_"] {
+    display: var(--display-profile-effects);
+}
 
 /* Profile effects */
-div[class^="profileEffects"] { display: var(--display-profile-effects); }
+div[class^="profileEffects"] {
+    display: var(--display-profile-effects);
+}
 
 /* Animated "Activities" hover effect in calls */
 /* NOTE: would be nice to disable the white hover effect,
- * but that'd break when you're actually in an activity */ 
-div[aria-labelledby^="vc-activities"] { display: none; }
+ * but that'd break when you're actually in an activity */
+div[aria-labelledby^="vc-activities"] {
+    display: none;
+}
 
 /* Bugfix laggy server scroll */
-div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
+div[data-dnd-name] > div[class^="wrapper"] svg {
+    overflow: hidden;
+}
 
 /* Hide Help button */
-div[aria-label="Help"] { display: none; }
+div[class^="toolbar_"] > a[href*="support.discord.com"] {
+    display: none;
+}
 
 /* Hide explore servers button */
-div[aria-label="Servers"] + div + div { display: none; }
+div[class^="footer"]:has(
+        [data-list-item-id="guildsnav___guild-discover-button"]
+    ) {
+    display: none;
+}
+div[class*="unreadMentionsFixedFooter"] {
+    bottom: 0;
+} /* Removed unread mentions indicator footer offset */
 
 /* Hide download button in web version */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div { display: none; } /* separator */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div { display: none; } /* button & click target */
+div[class^="listItem_"]:has(div[class^="guildSeparator_"]):has(
+        + div[class^="listItem_"]
+            [data-list-item-id="guildsnav___app-download-button"]
+    ) {
+    display: none;
+} /* separator */
+div[class^="listItem_"]:has(
+        [data-list-item-id="guildsnav___app-download-button"]
+    ) {
+    display: none;
+} /* button & click target */
 
 /* Hide Library button in Home */
-a[data-list-item-id*="___library"] { display: none; }
+a[data-list-item-id*="___library"] {
+    display: none;
+}
 
-/* Nitro profile badges */
-div[aria-label^="Subscriber since"], div[aria-label^="Early Supporter"] { display: var(--display-badges); }
-
-/* Server booster profile badge */
-div[aria-label^="Server boosting since" i] { display: var(--display-badges); }
+/* Nitro and server booster profile badge */
+div[class^="tags"] div[role="group"] > div:has(a[href*="/settings/premium"]) {
+    display: var(--display-badges);
+}
 
 /* Server booster member list badge */
-svg[aria-label^="Server boosting since" i] { display: var(--display-badges); }
+div[class^="nameAndDecorators_"] > div:has(svg[class^="premiumIcon_"]) {
+    display: var(--display-badges);
+}
 
 /* Hide all super reactions entirely */
-div[id*="message-reactions"] div:has(div div[aria-label*="super reaction"]) { display: var(--display-super-reactions); }
+div[id*="message-reactions"]
+    div:has(
+        > div[class^="reaction_"]
+            > div[class^="reactionInner_"]
+            > div:first-child:not([class=""])
+    ) {
+    display: var(--display-super-reactions);
+}
 
 /* Hide "Active Now" sidebar in friends list */
-div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
-
+div[class^="nowPlayingColumn"] {
+    display: var(--display-active-now);
+}
 
 /* ------------------------ */
 /* Disblock Origin branding */
 /* ------------------------ */
 
 div[class^="socialLinks"]::before {
-    content: url("data:image/svg+xml,%3Csvg width='20px' height='20px' viewBox='0 0 40 40' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cg style='display:inline;opacity:1;fill:%23cba6f7;fill-opacity:1'%3E%3Cg style='display:inline;fill:%23cba6f7;fill-opacity:1;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1'%3E%3Cpath d='M447.834 669.1c-80.631-57.032-80.631-57.032-80.631-199.61 34.556 0 46.075 0 80.63-28.515m0 228.124c80.632-57.03 80.632-57.03 80.632-199.609-34.556 0-46.075 0-80.631-28.515' style='fill:%23cba6f7;fill-opacity:1;fill-rule:nonzero;stroke:%23fff;stroke-width:1.60191;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1' transform='matrix(-.18376 0 0 .14846 102.293 -62.399)'/%3E%3C/g%3E%3C/g%3E%3Cg style='display:inline'%3E%3Cpath d='M79.544 43.453h-27.95v31.451l18.603 16.78V61.16h9.932c6.314 0 9.428 3.036 9.428 7.927v23.356c0 4.89-2.947 8.18-9.428 8.18H51.51v17.79h27.947c14.983.086 29.04-7.421 29.04-24.62V68.665c.085-17.539-13.973-25.212-28.952-25.212Z' fill='%237289da' style='fill:%23fff;fill-opacity:1;stroke-width:.749684' transform='matrix(.26458 0 0 .26458 -1.168 -1.943)'/%3E%3C/g%3E%3C/svg%3E%0A");;
-    padding-right: 5px;
-    align-self: center;
+    content: "";
     display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding: 0 2px;
+    margin-right: 8px;
+    background-color: var(--interactive-normal);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='16' height='16' viewBox='0 0 40 40'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' fill='currentColor' d='M19.999 36.936C34.816 28.469 34.816 28.469 34.816 7.3c-6.35 0-8.467 0-14.817-4.233m0 33.867C5.182 28.47 5.182 28.47 5.182 7.301c6.35 0 8.467 0 14.817-4.233ZM19.878 9.554h-7.395v8.321l4.922 4.44v-8.076h2.628c1.67 0 2.494.803 2.494 2.097v6.18c0 1.293-.78 2.164-2.494 2.164H12.46v4.707h7.394c3.964.022 7.683-1.964 7.683-6.514v-6.649c.023-4.64-3.697-6.67-7.66-6.67Z'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+}
+
+nav[class^="sidebar"] div[class^="info_"] > span:last-child::after {
+    content: "Ads blocked by Disblock Origin";
+    display: block;
 }
