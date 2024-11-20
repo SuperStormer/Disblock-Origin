@@ -12,8 +12,18 @@ Use your favorite client mod (such as Vencord) to add the theme. You can use thi
 https://allpurposem.at/disblock/DisblockOrigin.theme.css
 ```
 
-> [!NOTE]
-> It's possible to toggle certain features by overriding settings listed at the top of the `theme.css`. To do so, copy the `:root` block from the `theme.css` and paste it into **Local Themes** > **Edit QuickCSS**. You can then adjust the values to your liking as described in the comment above it. Alternatively, you can create a new `:root` block in the QuickCSS and add only the settings you want to change.
+To see whether Disblock Origin is properly installed, check for the logo at the bottom of the settings sidebar next to Discord's social logos, you should see a Disblock Origin logo to let you know it's working.
 
+## Customization
+Certain features of Disblock Origin are cutomizable by overriding settings listed at the top of the theme file:
+https://codeberg.org/AllPurposeMat/Disblock-Origin/src/commit/76d60d22c1e47f5f5f5d12178f08e4352b10d589/DisblockOrigin.theme.css#L9-L36
 
-To see whether Disblock Origin is properly installed, check for the logo at the bottom of the settings sidebar next to Discord's social logos, you should see a mauve Disblock Origin logo to let you know it's working.
+To change a setting, copy and paste the `:root` block into your custom CSS (accessible on Vencord via **Local Themes** > **Edit QuickCSS**), and any variables you want changed. Use `none` to hide something, and `unset` to show it.
+
+For example, to show the GIF button in the chat box, you can use the following snippet in your custom CSS:
+```css
+:root {
+    /* disable hiding the GIF picker button */
+    --display-gif-button: unset;
+}
+```
