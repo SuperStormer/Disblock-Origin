@@ -39,7 +39,7 @@
 /* ------------------ */
 
 /* Hide Nitro button in Home */
-a[href="/store"] { display: none; }
+li[role="listitem"]:has(a[href="/store"]) { display: none; }
 
 /* Hide shop button in Home */
 a[href="/shop"] { display: none; }
@@ -319,3 +319,4 @@ nav[class^="sidebar"] div[class^="info_"] > span:last-child::after {
     content: "Ads blocked by Disblock Origin";
     display: block;
 }
+
