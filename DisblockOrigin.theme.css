@@ -241,8 +241,8 @@ div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery
 /* ------------------ */
 
 /* Chatbox buttons */
-div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerButton_"])):not(:has(button[class*=" emojiButton_"])) { display: var(--display-gif-button); } /* Open GIF picker */
-div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons); } /* Open sticker picker */
+div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerButton_"])):not(:has(button[class*=" emojiButton_"])):not(.vc-chatbar-button) { display: var(--display-gif-button, flex); } /* Open GIF picker */
+div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons, flex); } /* Open sticker picker */
 div[class^="channelTextArea_"] div[class^="buttons_"] > button[type="button"] { display: none; } /* Send a gift */
 div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 
@@ -254,7 +254,7 @@ div[class*="popoverReactionHoverBar"] > div[role="button"]:has([data-type="emoji
 div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
 
 /* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
-button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons); }
+button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons, flex); }
 
 /* Avatar decorations */
 svg[class*="avatarDecoration_"] { display: var(--display-profile-effects); }
