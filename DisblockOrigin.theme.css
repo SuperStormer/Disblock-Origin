@@ -18,6 +18,7 @@
   --display-badges: none;                         /* Nitro and Booster badges on user profiles */
   --display-gif-button: none;                     /* GIF button in chat bar */
   --display-sticker-buttons: none;                /* Sticker button in chat bar & emoji picker */
+  --display-hover-reaction-emoji: unset;          /* Emoji suggestions on message hover */
   --display-app-launcher: none;                   /* App launcher right of chat bar */
   --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
   --display-super-reactions: unset;               /* Hide super reactions entirely */
@@ -244,6 +245,10 @@ div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerB
 div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons); } /* Open sticker picker */
 div[class^="channelTextArea_"] div[class^="buttons_"] > button[type="button"] { display: none; } /* Send a gift */
 div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
+
+/* Hide emoji suggestions on message hover */
+div[class*="popoverReactionHoverBar"] > div[role="button"]:has([data-type="emoji"]) { display: var(--display-hover-reaction-emoji, flex); } /* Emoji reaction button */
+div[class*="popoverReactionHoverBar"] > div[role="button"]:has([data-type="emoji"]) + div[class^="separator"] { display: var(--display-hover-reaction-emoji); } /* Separator */
 
 /* Edit image with Apps on image hover */
 div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
