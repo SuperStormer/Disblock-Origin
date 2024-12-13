@@ -297,6 +297,9 @@ div[id*="message-reactions"] div:has( > div[class^="reaction_"] > div[class^="re
 /* Hide "Active Now" sidebar in friends list */
 div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
 
+/* Hide "Quest Reward" Panel above user info */
+section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) { display: none; }
+
 
 /* ------------------------ */
 /* Disblock Origin branding */
