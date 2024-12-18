@@ -300,6 +300,8 @@ div[class^="nowPlayingColumn"] { display: var(--display-active-now); }
 /* Hide "Quest Reward" Panel above user info */
 section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) { display: none; }
 
+/* Hide "Play Again" activities heading in DMs list */
+li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) { display: none; }
 
 /* ------------------------ */
 /* Disblock Origin branding */
