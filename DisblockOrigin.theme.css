@@ -219,10 +219,10 @@ div[class*="premiumDisabled_"] {display:none;}*/
 button[id="super-reaction-picker-tab"] { display: none; }
 
 /* Super reaction animation */
-@container style(--bool-super-reaction-hide-anim: true) {
+@container style(--bool-super-reaction-hide-anim: true) or style(--bool-super-reaction-hide-anim: 1) {
   div[class*="shakeReaction"] { animation: none !important; }
   div[class^="reactionInner"] div[class^="effectsWrapper"] { display: none; }
-  img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 255; }
+  img[class*="hideEmoji"] { animation: blink-emoji 1s linear infinite; opacity: 1; }
   @keyframes blink-emoji {
     50% { opacity: 0; }
   }

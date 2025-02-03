@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           Disblock Origin
+@namespace      https://allpurposem.at
+@version        1.1.0
+@description    Hide all Nitro & Boost upsells on Discord!
+@homepageURL    https://codeberg.org/AllPurposeMat/Disblock-Origin
+@supportURL     https://codeberg.org/AllPurposeMat/Disblock-Origin/issues
+@license        MIT
+
+@var select     display-badges "Display Nitro and Booster badges" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-gif-button "Display GIF button in chat bar" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-sticker-buttons "Display Sticker buttons in chat bar & emoji picker" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-hover-reaction-emoji "Display emoji suggestions on message hover" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-app-launcher "Display App launcher right of chat bar" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var checkbox   bool-super-reaction-hide-anim "Replace Super Reactions with a blink animation" 1
+
+@var select     display-super-reactions "Display Super Reactions" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-profile-effects "Display Avatar decorations & profile effects" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-active-now "Display Active Now column in friends list" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-server-settings-boost-tab "Display boost tab in server settings" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-settings-billing-header "Display settings billing header" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-settings-nitro-tab "Display settings Nitro tab" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-settings-server-boost-tab "Display settings Server Boost tab" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-settings-subscriptions-tab "Display settings Subscriptions tab" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
+@var select     display-settings-gift-inventory-tab "Display settings Gift Inventory tab" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var select     display-settings-billing-tab "Display settings Billing tab" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+==/UserStyle== */
+
+@-moz-document domain("discord.com") {
+    @import url("https://allpurposem.at/disblock/DisblockOrigin.theme.css");
+}
