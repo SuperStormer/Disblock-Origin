@@ -270,6 +270,15 @@ form > div[class^=channelBottomBarArea_] {
   div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
 }
 
+/* Hide emoji suggestions on message hover */
+div[class*="popoverReactionHoverBar"] > div[role="button"]:has(div[data-type="emoji"]) {
+  /* Emoji reaction buttons */
+  display: var(--display-hover-reaction-emoji, flex);
+
+  /* Separator */
+  + div[class^="separator"] { display: var(--display-hover-reaction-emoji); }
+}
+
 /* Edit image with Apps on image hover */
 div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
 
