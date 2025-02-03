@@ -38,27 +38,28 @@
 /* Hide Nitro upsells */
 /* ------------------ */
 
-/* Hide Nitro button in Home */
-li[role="listitem"]:has(a[href="/store"]) { display: none; }
+li[role="listitem"] {
+  /* Hide Nitro button in Home */
+  :has(a[href="/store"]) { display: none; }
 
-/* Hide shop button in Home */
-a[href="/shop"] { display: none; }
-
+  /* Hide shop button in Home */
+  :has(a[href="/shop"]) { display: none; }
+}
 /* [Settings][Sidebar] Hide Nitro tabs */
 div[role="tablist"] {
-    > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
-    > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
-    > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
-    > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
-    > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
-    > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
-    > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
+  > div[class*="separator_"]:has(+ div[class*="header_"] + div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Seperator */
+  > div[class*="header_"]:has(+ div[class*="premiumTab_"]) { display: var(--display-settings-billing-header); }  /* Billing Settings header */
+  > div[class*="premiumTab_"] { display: var(--display-settings-nitro-tab); } /* Nitro */
+  > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
+  > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
+  > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
+  > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
 }
 
 /* [Settings][Sidebar] Disable Nitro tab shininess (for search) */
 div[class^="premiumTab"] {
-    div[class^="premiumLabel"] svg { display: none; }
-    div[class^="background"] { display: none; }
+  div[class^="premiumLabel"] svg { display: none; }
+  div[class^="background"] { display: none; }
 }
 
 /* Server Profiles: Make unique profiles for each server box */
@@ -74,37 +75,44 @@ div[class*="effectGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* 
 /* Profiles: Try out Nitro! box */
 div[class^="premiumFeatureBorder"] { display: none; }
 
-/* Profiles: New style ad */
-#profile-customization-tab > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
+#profile-customization-tab {
+  /* Profiles: New style ad */
+  > div[class^="container"]:has(button[class*="colorBrand"]) { display: none; }
 
-/* [Settings][Profiles]: Per server avatar */
-#profile-customization-tab div[class^="avatar_"]:has(path[d="M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"]) {
-    pointer-events: none;
+  /* [Settings][Profiles]: Per server avatar */
+  div[class^="avatar_"]:has(path[d="M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"]) {
+      pointer-events: none;
+  }
+
+  /* [Settings][Profiles]: Hide profile customization ad in banner preview */
+  foreignObject div[role="button"]:has(path[d^="M15 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"]) { display: none;}
+
+  /* [Settings][Profiles]: Hide the 'Level up your look, only with Nitro' upsell banner */
+  div[class^="upsellContainer"] { display: none; }
 }
-
-/* [Settings][Profiles]: Hide profile customization ad in banner preview */
-#profile-customization-tab foreignObject div[role="button"]:has(path[d^="M15 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"]) { display: none;}
-
-/* [Settings][Profiles]: Hide the 'Level up your look, only with Nitro' upsell banner */
- #profile-customization-tab div[class^="upsellContainer"] { display: none; }
 
 /* [Settings][Voice & Video] Soundboard entrance sounds */
 div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
 
-/* [Settings][Appearance] App icon and Theme upsell (old version) */
-#appearance-tab div[class^="selectionGroup"]:has(div[class*="appIconSelectionContainer"]):has(div[class*="premiumSubscribeButton_"]) { display: none; }
-#appearance-tab div[role="button"]:has(svg[class*="nitroWheel"]) { display: none;}
+#appearance-tab {
+  /* [Settings][Appearance] App icon and Theme upsell (old version) */
+  div[class^="selectionGroup"]:has(div[class*="appIconSelectionContainer"]):has(div[class*="premiumSubscribeButton_"]) { display: none; }
+  div[role="button"]:has(svg[class*="nitroWheel"]) { display: none;}
 
-/* [Settings][Appearance] App icon and Theme upsell (new version) */
-#appearance-tab div[class*="SelectionContainer"]:has(div[class*="lockedBadgeContainer"]) { display: none;}
-#appearance-tab div[class*="description"]:has(svg[class*="nitroWheel"]) { display: none;}
+  /* [Settings][Appearance] App icon and Theme upsell (new version) */
+  div[class*="SelectionContainer"]:has(div[class*="lockedBadgeContainer"]) { display: none;}
+  div[class*="description"]:has(svg[class*="nitroWheel"]) { display: none;}
+}
 
 /* Hide message size upsells */
 div[class^="characterCount"] > div[class*=" upsell_"] { display: none; }
 
+
 /* [Voice Chat][Screen Share] Hide Screen Share quality upsells */
-div[class*="qualitySettingsContainer_"] button[class*="premiumUpsell"] { display: none; }
-div[class*="qualitySettingsContainer_"] div[class*="upsellBanner_"] { display: none; }
+div[class*="qualitySettingsContainer_"] {
+  button[class*="premiumUpsell"] { display: none; }
+  div[class*="upsellBanner_"] { display: none; }
+}
 
 /* Hide ad in profile banners */
 div[class^="premiumIconWrapper"] { display: none; }
@@ -146,7 +154,7 @@ div[class^=emojiLockIconContainer] { display: none; }
 div[class*=categorySectionNitroLocked] > ul > li > button > img[class^="lockedEmoji"] { filter: grayscale(1); }
 
 /* Grayscale for emoji that are simply locked and not in the Nitro section */
-button:has(div[class^=emojiLockIconContainer]) { filter: grayscale(1); }
+button[data-type="emoji"]:has(div[class^=emojiLockIconContainer]) { filter: grayscale(1); }
 
 /* Friend panel nitro upsell */
 div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button"])  { display: none; }
@@ -158,41 +166,46 @@ div[class*="notice"][class*="colorPremium"] { display: none; }
 /* Server boosts */
 /* ------------- */
 
+/* Boost progress bar */
+#channels > ul > li > div[data-list-item-id^="channels___boosts"] { display: none; }
+
 /* Server Boost button in top left dropdown */
 div[id="guild-header-popout-premium-subscribe"] { display: none; }
 div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"]) + div[role="separator"] { display: none; }
 
-/* Boost progress bar */
-#channels > ul > li > div[data-list-item-id^="channels___boosts"] { display: none; }
+div[role="tablist"] {
+  /* [Server settings][Sidebar]: Boost tab */
+  div[class^="serverBoostTabItem"] {
+    display: var(--display-server-settings-boost-tab);
 
-/* [Server settings][Sidebar]: Boost tab */
-div[class*="separator"]:has(+ div[class^="serverBoostTabItem"]) { display: var(--display-server-settings-boost-tab); } /* Seperator */
-div[class^="serverBoostTabItem"] { display: var(--display-server-settings-boost-tab); } /* Boost Tab */
+    /* Disable SVG icon */
+    svg { display: none; }
 
-/* [Server settings][Sidebar]: Disable Boost tab customization */
-div[class^="serverBoostTabItem"][aria-selected=true] { background-color: var(--background-modifier-selected) !important; color: var(--interactive-active) !important;}
-div[class^="serverBoostTabItem"] svg { display: none; }
-
-/* [Server settings][Sidebar]: Custom Invite Link tab */
-/* TODO: Tab doesn't hide for me sometimes? */
-div[aria-controls="vanity_url-tab"] { display: none; }
-button[class^="shinyButton"]:has(div[class*="upsellButton"]) { display: none; }
+    /* Separator after tab */
+    + div[class^="separator"] { display: none; }
+  }
+}
 
 /* [Server settings][Overview]: Server Banner & Invite Background */
 #overview-tab div[class^="divider"]:has( > div > div > div[class^="upsell"]) { display: none; }
 
 /* [Server settings][Roles]: Hide role icon*/
-#roles-tab div[class^="container"]:has(div[class^="clickable"]):has(div[class^="availabilityIndicator"]) { display: none; }
+#roles-tab div[class^="container"]:has(div[class^="availabilityIndicator"]) { display: none; }
 
 /* [Server settings][Stickers]: Hide locked tier content */
-#stickers-tab div[class*="tierHeader"] svg[class^="tierIcon"] { display: none; }
-#stickers-tab div[class*="tierHeader"]:has(svg[class*="tierLock"]) { border-radius: 8px; }
-#stickers-tab div[class*="tierHeader"]:has(svg[class*="tierLock"]) + div[class^="tierBody"] { display: none; }
+#stickers-tab {
+  div[class^="upsellContainer"] { display: none; }
 
-/* [Server settings][Boost]: Server boost ads */
-#guild_premium-tab > div[class^="divider"] { display: none; }
-#guild_premium-tab > div[class^="wrapper"] { display: none; }
-#guild_premium-tab > div[class^="tier0Container"] { display: none; }
+  div[class*="tierHeaderLocked"] + div > div[class^="emptyTierWrapper"] { display: none; }
+}
+
+/* [Server settings][Boost]: Server boost ad at the bottom */
+#guild_premium-tab > div[class^="divider"] {
+  display: none;
+
+  ~ div[class^="wrapper"] { display: none; }
+  ~ div[class^="tier0Container"] { display: none; }
+}
 
 /* TODO: would be nice to hide disabled soundboard sounds & emojis
  * However, looks like it needs to be done on the JS level. This is too buggy
@@ -240,14 +253,22 @@ div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery
 /* ------------------ */
 
 /* Chatbox buttons */
-div[class^="expression-picker-chat-input-button"]:not(:has(div[class*=" stickerButton_"])):not(:has(button[class*=" emojiButton_"])):not(.vc-chatbar-button) { display: var(--display-gif-button, flex); } /* Open GIF picker */
-div[class^="expression-picker-chat-input-button"]:has(div[class*=" stickerButton_"]) { display: var(--display-sticker-buttons, flex); } /* Open sticker picker */
-div[class^="channelTextArea_"] div[class^="buttons_"] > button[type="button"] { display: none; } /* Send a gift */
-div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
+form > div[class^=channelBottomBarArea_] {
+  div[class^="buttons_"]
+  {
+    /* Send gift button */
+    > button { display: none; }
+  
+    /* GIF picker button */
+    div[class^="expression-picker-chat-input-button"]:nth-of-type(1) { display: var(--display-gif-button, flex); }
+    
+    /* Sticker picker button */
+    div[class^="expression-picker-chat-input-button"]:has(div[class*="stickerButton_"]) { display: var(--display-sticker-buttons, flex); }
+  }
 
-/* Hide emoji suggestions on message hover */
-div[class*="popoverReactionHoverBar"] > div[role="button"]:has([data-type="emoji"]) { display: var(--display-hover-reaction-emoji, flex); } /* Emoji reaction button */
-div[class*="popoverReactionHoverBar"] > div[role="button"]:has([data-type="emoji"]) + div[class^="separator"] { display: var(--display-hover-reaction-emoji); } /* Separator */
+  /* Apps button (right) */
+  div[class^="channelAppLauncher_"] { display: var(--display-app-launcher); }
+}
 
 /* Edit image with Apps on image hover */
 div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
@@ -256,8 +277,7 @@ div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosa
 button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons, flex); }
 
 /* Avatar decorations */
-svg[class*="avatarDecoration_"] { display: var(--display-profile-effects); }
-img[class^="avatarDecoration_"] { display: var(--display-profile-effects); }
+svg[class*="avatarDecoration_"], img[class^="avatarDecoration_"] { display: var(--display-profile-effects); }
 
 /* Profile effects */
 div[class^="profileEffects"] { display: var(--display-profile-effects); }
@@ -266,9 +286,6 @@ div[class^="profileEffects"] { display: var(--display-profile-effects); }
 /* NOTE: would be nice to disable the white hover effect,
  * but that'd break when you're actually in an activity */ 
 div[aria-labelledby^="vc-activities"] { display: none; }
-
-/* Bugfix laggy server scroll */
-div[data-dnd-name] > div[class^="wrapper"] svg { overflow: hidden; }
 
 /* Hide Help button */
 div[class^="toolbar_"] > a[href*="support.discord.com"] { display: none; }
