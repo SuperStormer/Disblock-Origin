@@ -85,6 +85,9 @@ div[class^="premiumFeatureBorder"] { display: none; }
 /* [Settings][Profiles]: Hide profile customization ad in banner preview */
 #profile-customization-tab foreignObject div[role="button"]:has(path[d^="M15 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"]) { display: none;}
 
+/* [Settings][Profiles]: Hide the 'Level up your look, only with Nitro' upsell banner */
+ #profile-customization-tab div[class^="upsellContainer"] { display: none; }
+
 /* [Settings][Voice & Video] Soundboard entrance sounds */
 div[id="voice-&-video-tab"] div[class*="callSoundsDivider_"] ~ * { display: none; }
 
