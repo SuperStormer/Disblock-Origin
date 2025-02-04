@@ -162,6 +162,9 @@ div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button
 /* Hide "sneak peek" upsell banner */
 div[class*="notice"][class*="colorPremium"] { display: none; }
 
+/* "Amp up your profile" when opening a profile */
+div[class^=upsellContainer] { display: none; }
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
