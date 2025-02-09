@@ -20,9 +20,14 @@ https://allpurposem.at/disblock/DisblockOrigin.theme.css
 
 If using Discord from the browser, you can use the
 [Stylus](https://add0n.com/stylus.html) to load and configure Disblock Origin.
-Simply click the button below with the extension installed:
+First, click the button below with the extension installed:
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://codeberg.org/AllPurposeMat/Disblock-Origin/raw/branch/master/DisblockOrigin.user.css)
+
+If on Firefox, you must enable `Patch CSP to allow style assets` or the style
+won't work. If you are having problems, make sure
+`Circumvent CSP 'style-src' via adoptedStyleSheets` is **DIS**abled (see #41 for
+discussion).
 
 ### Checking
 
