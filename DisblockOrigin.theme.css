@@ -260,10 +260,10 @@ form > div[class^=channelBottomBarArea_] {
   div[class^="buttons_"]
   {
     /* Send gift button */
-    > button { display: none; }
+    > div:has(div[class*="trinketsIcon_"]) { display: none; }
   
     /* GIF picker button */
-    div[class^="expression-picker-chat-input-button"]:nth-of-type(1) { display: var(--display-gif-button, flex); }
+    div[class^="expression-picker-chat-input-button"]:has( + div[class^="expression-picker-chat-input-button"] div[class*="stickerButton_"]) { display: var(--display-gif-button, flex); }
     
     /* Sticker picker button */
     div[class^="expression-picker-chat-input-button"]:has(div[class*="stickerButton_"]) { display: var(--display-sticker-buttons, flex); }
