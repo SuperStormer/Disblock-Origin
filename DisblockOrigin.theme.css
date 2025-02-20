@@ -259,8 +259,8 @@ div[class^=tags] div[role="group"] > div > a[href="https://discord.com/discovery
 form > div[class^=channelBottomBarArea_] {
   div[class^="buttons_"]
   {
-    /* Send gift button */
-    > div:has(div[class*="trinketsIcon_"]) { display: none; }
+    /* Send gift button (both versions) */
+    > div:has(div[class*="trinketsIcon_"]), > button { display: none; }
   
     /* GIF picker button */
     div[class^="expression-picker-chat-input-button"]:has( + div[class^="expression-picker-chat-input-button"] div[class*="stickerButton_"]) { display: var(--display-gif-button, flex); }
