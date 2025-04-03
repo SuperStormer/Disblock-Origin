@@ -17,7 +17,7 @@
     "Hide*": "none"
 }
 
-@var select     display-sticker-buttons "Display Sticker buttons in chat bar & emoji picker" {
+@var select     display-sticker-button "Display Sticker button in chat bar" {
     "Show": "unset",
     "Hide*": "none"
 }

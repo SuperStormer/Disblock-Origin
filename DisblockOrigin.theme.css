@@ -17,7 +17,7 @@
 :root {
   --display-badges: none;                         /* Nitro and Booster badges on user profiles */
   --display-gif-button: none;                     /* GIF button in chat bar */
-  --display-sticker-buttons: none;                /* Sticker button in chat bar & emoji picker */
+  --display-sticker-button: none;                /* Sticker button in chat bar */
   --display-hover-reaction-emoji: unset;          /* Emoji suggestions on message hover */
   --display-app-launcher: none;                   /* App launcher right of chat bar */
   --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
@@ -270,7 +270,7 @@ form > div[class^=channelBottomBarArea_] {
     div[class^="expression-picker-chat-input-button"]:has( + div[class^="expression-picker-chat-input-button"] div[class*="stickerButton_"]) { display: var(--display-gif-button, flex); }
     
     /* Sticker picker button */
-    div[class^="expression-picker-chat-input-button"]:has(div[class*="stickerButton_"]) { display: var(--display-sticker-buttons, flex); }
+    div[class^="expression-picker-chat-input-button"]:has(div[class*="stickerButton_"]) { display: var(--display-sticker-button, flex); }
   }
 
   /* Apps button (right) */
@@ -288,9 +288,6 @@ div[class*="popoverReactionHoverBar"] > div[role="button"]:has(div[data-type="em
 
 /* Edit image with Apps on image hover */
 div[class^="imageContainer_"] div[class^="hoverButton_"]:not([class*="removeMosaicItemHoverButton"]) { display: none; }
-
-/* Stickers tab in emoji/GIF picker (can always be opened if needed with Ctrl+S) */
-button[id="sticker-picker-tab"] { display: var(--display-sticker-buttons, flex); }
 
 /* Avatar decorations */
 svg[class*="avatarDecoration_"], img[class^="avatarDecoration_"] { display: var(--display-profile-effects); }
