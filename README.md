@@ -26,7 +26,8 @@ First, click the button below with the extension installed:
 
 If on Firefox, you must enable `Patch CSP to allow style assets` or the style
 won't work. If you are having problems, make sure
-`Circumvent CSP 'style-src' via adoptedStyleSheets` is **DIS**abled (see #41 for
+`Circumvent CSP 'style-src' via adoptedStyleSheets` is **DIS**abled (see
+[#41](https://codeberg.org/AllPurposeMat/Disblock-Origin/issues/41) for
 discussion).
 
 ### Checking
