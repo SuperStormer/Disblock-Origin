@@ -23,7 +23,7 @@
   --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
   --display-super-reactions: unset;               /* Hide super reactions entirely */
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
-  --display-nameplates: unset;                    /* Hide nameplates in the members list */
+  --display-nameplates: none;                    /* Hide nameplates in the members list */
   --display-active-now: unset;                    /* Active Now column in friends list */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
 
@@ -299,7 +299,7 @@ svg[class*="avatarDecoration_"], img[class^="avatarDecoration_"] { display: var(
 div[class^="profileEffects"] { display: var(--display-profile-effects); }
 
 /* Nameplates */
-div[class*="member_"] > div[class*="nameplated_*"] > div[class^="container_"] { display: var(--display-nameplates); }
+div[class*="member_"] > div[class*="nameplated_"] > div[class^="container_"] { display: var(--display-nameplates); }
 
 /* Animated "Activities" hover effect in calls */
 /* NOTE: would be nice to disable the white hover effect,

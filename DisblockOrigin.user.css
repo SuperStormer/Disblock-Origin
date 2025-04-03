@@ -44,6 +44,11 @@
     "Hide*": "none"
 }
 
+@var select     display-nameplates "Display nameplates in the members list" {
+    "Show": "unset",
+    "Hide*": "none"
+}
+
 @var select     display-active-now "Display Active Now column in friends list" {
     "Show*": "unset",
     "Hide": "none"
