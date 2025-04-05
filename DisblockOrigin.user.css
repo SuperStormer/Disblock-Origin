@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Disblock Origin
 @namespace      https://allpurposem.at
-@version        1.1.0
+@version        1.2.0
 @description    Hide all Nitro & Boost upsells on Discord!
 @homepageURL    https://codeberg.org/AllPurposeMat/Disblock-Origin
 @supportURL     https://codeberg.org/AllPurposeMat/Disblock-Origin/issues
@@ -84,7 +84,7 @@
     "Hide": "none"
 }
 
-@var select     display-settings-billing-tab "Display settings Billing tab" {
+@var select     display-nitro-features "Display Nitro features" {
     "Show": "unset",
     "Hide*": "none"
 }

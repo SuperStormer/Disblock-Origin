@@ -1,7 +1,7 @@
 /**
  * @name Adblock for Discord
  * @author TheSunCat and contributors
- * @version 1.1.0
+ * @version 1.2.0
  * @description Hide all Nitro & Boost upsells on Discord!
  * @source https://codeberg.org/AllPurposeMat/Disblock-Origin
  */
@@ -32,7 +32,7 @@
   --display-settings-server-boost-tab: none;      /* Settings menu Server Boost tab */
   --display-settings-subscriptions-tab: none;     /* Settings menu Subscriptions tab */
   --display-settings-gift-inventory-tab: unset;   /* Settings menu Gift Inventory tab */
-  --display-settings-billing-tab: none;           /* Settings menu Billing tab */
+  --display-nitro-features: none;                 /* Settings menu Billing tab, Super React toggle, GIF Avatar */
 }
 
 /* ------------------ */
