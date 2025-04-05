@@ -17,13 +17,13 @@
 :root {
   --display-badges: none;                         /* Nitro and Booster badges on user profiles */
   --display-gif-button: none;                     /* GIF button in chat bar */
-  --display-sticker-button: none;                /* Sticker button in chat bar */
+  --display-sticker-button: none;                 /* Sticker button in chat bar */
   --display-hover-reaction-emoji: unset;          /* Emoji suggestions on message hover */
   --display-app-launcher: none;                   /* App launcher right of chat bar */
   --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
   --display-super-reactions: unset;               /* Hide super reactions entirely */
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
-  --display-nameplates: none;                    /* Hide nameplates in the members list */
+  --display-nameplates: none;                     /* Hide nameplates in the members list */
   --display-active-now: unset;                    /* Active Now column in friends list */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
 
@@ -66,8 +66,17 @@ div[class^="premiumTab"] {
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
 
-/* Profiles: Choose a GIF avatar */
-div[class^="optionBox"]:has(div[class^="text-sm/semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+
+/* These settings are not applied if the billing tab is shown (inferred the user has Nitro) */
+@container style(--display-settings-billing-tab: none) {
+  /* Profiles: Choose a GIF avatar */
+  ul[class^=optionsList] { grid-template-columns: 1fr; }
+  ul[class^=optionsList] li:nth-child(2) { display: none; }
+  
+  /* Add Super Reaction menu item */
+div[class^=burstToggle] { display: none; }
+  div[class^="burstToggle"] { display: none; }
+}
 
 /* Profiles: Change decorations exclusive to Nitro */
 div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
@@ -232,10 +241,6 @@ button[id="super-reaction-picker-tab"] { display: none; }
   }
 }
 
-
-/* Add Super Reaction menu item */
-div[class^=burstToggle] { display: none; }
-
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
 
@@ -356,4 +361,3 @@ nav[class^="sidebar"] div[class^="info_"] > span:last-child::after {
     content: "Ads blocked by Disblock Origin";
     display: block;
 }
-
