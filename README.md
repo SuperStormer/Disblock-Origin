@@ -59,3 +59,8 @@ snippet in your custom CSS:
   --display-gif-button: unset;
 }
 ```
+
+The `display-nitro-features` setting is intended for Nitro users that still want access to useful features such as:
+- The Billing tab in user settings
+- The toggle for Super Reactions
+- Choosing a GIF as Avatar / Banner

@@ -1,7 +1,7 @@
 /**
  * @name Adblock for Discord
  * @author TheSunCat and contributors
- * @version 1.1.0
+ * @version 1.2.0
  * @description Hide all Nitro & Boost upsells on Discord!
  * @source https://codeberg.org/AllPurposeMat/Disblock-Origin
  */
@@ -17,13 +17,13 @@
 :root {
   --display-badges: none;                         /* Nitro and Booster badges on user profiles */
   --display-gif-button: none;                     /* GIF button in chat bar */
-  --display-sticker-button: none;                /* Sticker button in chat bar */
+  --display-sticker-button: none;                 /* Sticker button in chat bar */
   --display-hover-reaction-emoji: unset;          /* Emoji suggestions on message hover */
   --display-app-launcher: none;                   /* App launcher right of chat bar */
   --bool-super-reaction-hide-anim: true;          /* Replace Super Reactions with a blink animation */
   --display-super-reactions: unset;               /* Hide super reactions entirely */
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
-  --display-nameplates: none;                    /* Hide nameplates in the members list */
+  --display-nameplates: none;                     /* Hide nameplates in the members list */
   --display-active-now: unset;                    /* Active Now column in friends list */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
 
@@ -32,7 +32,7 @@
   --display-settings-server-boost-tab: none;      /* Settings menu Server Boost tab */
   --display-settings-subscriptions-tab: none;     /* Settings menu Subscriptions tab */
   --display-settings-gift-inventory-tab: unset;   /* Settings menu Gift Inventory tab */
-  --display-settings-billing-tab: none;           /* Settings menu Billing tab */
+  --display-nitro-features: none;                 /* Settings menu Billing tab, Super React toggle, GIF Avatar */
 }
 
 /* ------------------ */
@@ -54,7 +54,7 @@ div[role="tablist"] {
   > div[class*="premiumTab_"] + div { display: var(--display-settings-server-boost-tab); } /* Server Boost */
   > div[class*="premiumTab_"] + div + div { display: var(--display-settings-subscriptions-tab); } /* Subscriptions */
   > div[class*="premiumTab_"] + div + div + div { display: var(--display-settings-gift-inventory-tab); } /* Gift Inventory */
-  > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-settings-billing-tab); } /* Billing */
+  > div[class*="premiumTab_"] + div + div + div + div { display: var(--display-nitro-features); } /* Billing */
 }
 
 /* [Settings][Sidebar] Disable Nitro tab shininess (for search) */
@@ -66,8 +66,17 @@ div[class^="premiumTab"] {
 /* Server Profiles: Make unique profiles for each server box */
 div[class*="upsellOverlayContainer_"] { display: none; }
 
-/* Profiles: Choose a GIF avatar */
-div[class^="optionBox"]:has(div[class^="text-sm/semibold"] > div[class^="optionBoxText"] > div[class^="optionBoxDescription"] > div[class^="nitroWheelFlairContainer"]) { display: none; }
+
+/* These settings are not applied if the billing tab is shown (inferred the user has Nitro) */
+@container style(--display-nitro-features: none) {
+  /* Profiles: Choose a GIF avatar */
+  ul[class^=optionsList] { grid-template-columns: 1fr; }
+  ul[class^=optionsList] li:nth-child(2) { display: none; }
+  
+  /* Add Super Reaction menu item */
+div[class^=burstToggle] { display: none; }
+  div[class^="burstToggle"] { display: none; }
+}
 
 /* Profiles: Change decorations exclusive to Nitro */
 div[class*="decorationGridItem"]:has(div[class*="iconBadge"]) { display: none; } /* Decorations */
@@ -232,10 +241,6 @@ button[id="super-reaction-picker-tab"] { display: none; }
   }
 }
 
-
-/* Add Super Reaction menu item */
-div[class^=burstToggle] { display: none; }
-
 /* Upsell when hovering a Super Reaction */
 div[class^="burstReactionTooltipPrompt"] { display: none; }
 
@@ -356,4 +361,3 @@ nav[class^="sidebar"] div[class^="info_"] > span:last-child::after {
     content: "Ads blocked by Disblock Origin";
     display: block;
 }
-
