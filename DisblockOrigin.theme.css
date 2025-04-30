@@ -302,7 +302,7 @@ div[class^="profileEffects"] { display: var(--display-profile-effects); }
 
 /* Nameplates */
 div[class*="member_"] > div[class*="nameplated_"] > div[class^="container_"] { display: var(--display-nameplates); }
-li[role="listitem"] > div[class*="platedWrapper_"] > div[class^="container_"] { display: var(--display-nameplates); }
+li[role="listitem"] > div[class*="interactive_"] > div[class^="container_"] { display: var(--display-nameplates); }
 
 /* Animated "Activities" hover effect in calls */
 /* NOTE: would be nice to disable the white hover effect,
