@@ -25,6 +25,7 @@
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
   --display-nameplates: none;                     /* Hide nameplates in the members list */
   --display-active-now: unset;                    /* Active Now column in friends list */
+  --display-clan-tags: unset;                     /* Clan tags next to the usernames */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
 
   --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
@@ -340,6 +341,9 @@ section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) { dis
 
 /* Hide "Play Again" activities heading in DMs list */
 li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) { display: none; }
+
+/* Hide clan tags next to the usernames */
+span[class^="chipletContainerInner__"]:has(img[class^="badge__"]) { display: var(--display-clan-tags); }
 
 /* ------------------------ */
 /* Disblock Origin branding */
