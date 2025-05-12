@@ -54,6 +54,11 @@
     "Hide": "none"
 }
 
+@var select     display-clan-tags "Display clan tags next to the usernames" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
 @var select     display-server-settings-boost-tab "Display boost tab in server settings" {
     "Show*": "unset",
     "Hide": "none"
