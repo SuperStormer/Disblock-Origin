@@ -266,7 +266,7 @@ div[class^=wrapper]:has(div[class^=instructions]) { display: none; }
 /* ------------------ */
 
 /* Chatbox buttons */
-form > div[class^=channelBottomBarArea_] {
+form div[class^=channelBottomBarArea_] {
   div[class^="buttons_"]
   {
     /* Send gift button (both versions) */
