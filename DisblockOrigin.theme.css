@@ -289,7 +289,7 @@ div[class*="popoverReactionHoverBar"] > div[role="button"]:has(div[data-type="em
   display: var(--display-hover-reaction-emoji, flex);
 
   /* Separator */
-  + div[class^="separator"] { display: var(--display-hover-reaction-emoji); }
+  ~ div[class^="separator"] { display: var(--display-hover-reaction-emoji); }
 }
 
 /* Edit image with Apps on image hover */
