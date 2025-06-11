@@ -343,7 +343,7 @@ section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) { dis
 li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) { display: none; }
 
 /* Hide clan tags next to the usernames */
-span[class^="chipletContainerInner__"]:has(img[class^="badge__"]) { display: var(--display-clan-tags); }
+span[class^="chipletContainerInner__"]:has(img[class^="badge__"]) { display: var(--display-clan-tags, inline-flex); }
 
 /* ------------------------ */
 /* Disblock Origin branding */
