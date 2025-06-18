@@ -96,5 +96,5 @@
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
-    @import url("https://allpurposem.at/disblock/DisblockOrigin.theme.css");
+    @import url("https://raw.codeberg.page/AllPurposeMat/Disblock-Origin/DisblockOrigin.theme.css");
 }
