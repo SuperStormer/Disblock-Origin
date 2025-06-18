@@ -27,6 +27,7 @@
   --display-active-now: unset;                    /* Active Now column in friends list */
   --display-clan-tags: unset;                     /* Clan tags next to the usernames */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
+  --bool-show-name-gradients: true;               /* Gradients & glow in usernames, boosted servers only */
 
   --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
   --display-settings-nitro-tab: none;             /* Settings menu Nitro tab */
@@ -346,6 +347,19 @@ li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) {
 span[class^="chipletContainerInner__"]:has(img[class^="badge__"]),
 span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
   display: var(--display-clan-tags, inline-flex);
+}
+
+/* Only for some servers, roles get animated gradients + glow */
+@container style(--bool-show-name-gradients: false) or style(--bool-show-name-gradients: false) {
+    span[class*=usernameGradient ] {
+      color: var(--custom-gradient-color-1);
+      background: none;
+      -webkit-text-fill-color: initial;
+
+      ~ [class*=nameGlow] {
+        display: none;
+      }
+    }
 }
 
 /* ------------------------ */

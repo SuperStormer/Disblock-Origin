@@ -64,6 +64,8 @@
     "Hide": "none"
 }
 
+@var checkbox   bool-show-name-gradients "Render gradients & glow in usernames, boosted servers only" 1
+
 @var select     display-settings-billing-header "Display settings billing header" {
     "Show*": "unset",
     "Hide": "none"
