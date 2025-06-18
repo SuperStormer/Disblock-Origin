@@ -345,9 +345,8 @@ li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) {
 /* Hide clan tags next to the usernames */
 span[class^="chipletContainerInner__"]:has(img[class^="badge__"]),
 span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
-  display: var(--display-clan-tags);
+  display: var(--display-clan-tags, inline-flex);
 }
-
 
 /* ------------------------ */
 /* Disblock Origin branding */
