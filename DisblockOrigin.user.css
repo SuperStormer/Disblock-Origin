@@ -64,6 +64,11 @@
     "Hide": "none"
 }
 
+@var select     display-server-members-activity "Hide servers members activity list" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
 @var checkbox   bool-show-name-gradients "Render gradients & glow in usernames, boosted servers only" 1
 
 @var select     display-settings-billing-header "Display settings billing header" {
