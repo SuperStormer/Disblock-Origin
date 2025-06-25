@@ -364,7 +364,7 @@ span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
 }
 
 /* Hide server members activity title */
-div[class^="membersGroup_"]:has(span[class^="headerContainer__"]) { display: var(--display-server-members-activity) !important; }
+h3[class^="membersGroup_"]:has(span[class^="headerContainer__"]) { display: var(--display-server-members-activity, block); }
 
 /* Hide server members activity cards */
 div[class^="members_"] div:not([class]):has(div[class*="openOnHover__"]) { display: var(--display-server-members-activity); }
