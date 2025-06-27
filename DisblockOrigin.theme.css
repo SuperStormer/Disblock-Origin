@@ -28,6 +28,7 @@
   --display-clan-tags: unset;                     /* Clan tags next to the usernames */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
   --bool-show-name-gradients: true;               /* Gradients & glow in usernames, boosted servers only */
+  --display-server-members-activity: unset;       /* Hide servers members activity list */
 
   --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
   --display-settings-nitro-tab: none;             /* Settings menu Nitro tab */
@@ -361,6 +362,12 @@ span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
       }
     }
 }
+
+/* Hide server members activity title */
+h3[class^="membersGroup_"]:has(span[class^="headerContainer__"]) { display: var(--display-server-members-activity, block); }
+
+/* Hide server members activity cards */
+div[class^="members_"] div:not([class]):has(div[class*="openOnHover__"]) { display: var(--display-server-members-activity); }
 
 /* ------------------------ */
 /* Disblock Origin branding */
