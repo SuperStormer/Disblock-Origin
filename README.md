@@ -2,8 +2,11 @@
 
 # Disblock Origin
 
-An ad-blocker "Theme" for Discord that hides all Nitro and "boost" upsells,
+A configurable ad-blocking "theme" for Discord that hides all Nitro and "boost" upsells,
 alongside some annoyances.
+
+> [!NOTE]  
+> I kindly request that, while welcome, forks are kept in free forges such as Codeberg. Though it is not within my control, I do not wish for my projects to be hosted on GitHub. For more info, see: [Give Up Github!](https://giveupgithub.org)
 
 ## Installation
 
@@ -13,7 +16,7 @@ Use your favorite client mod (such as Vencord) to add the theme. You can use
 this URL, which mirrors the files on the repo:
 
 ```
-https://allpurposem.at/disblock/DisblockOrigin.theme.css
+https://raw.codeberg.page/AllPurposeMat/Disblock-Origin/DisblockOrigin.theme.css
 ```
 
 ### With Stylus
@@ -42,7 +45,7 @@ Disblock Origin logo to let you know it's working.
 
 Certain features of Disblock Origin are cutomizable by overriding settings
 listed at the top of the theme file:
-https://codeberg.org/AllPurposeMat/Disblock-Origin/src/commit/76d60d22c1e47f5f5f5d12178f08e4352b10d589/DisblockOrigin.theme.css#L9-L36
+https://codeberg.org/AllPurposeMat/Disblock-Origin/src/commit/2d5de9a365e0eceb4981c4cd3b06ad8d9e17dd8c/DisblockOrigin.theme.css#L9-L38
 
 The UserCSS provides a UI for these, but it is unfortunately not possible to use
 it via a client mod. Instead, to change a setting, copy and paste the `:root`
@@ -60,7 +63,7 @@ snippet in your custom CSS:
 }
 ```
 
-The `display-nitro-features` setting is intended for Nitro users that still want access to useful features such as:
+The `display-nitro-features` setting is intended for Nitro users who want access to useful features such as:
 - The Billing tab in user settings
 - The toggle for Super Reactions
 - Choosing a GIF as Avatar / Banner

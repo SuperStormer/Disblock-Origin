@@ -21,7 +21,10 @@
 	--display-app-launcher: none; /* App launcher right of chat bar */
 	--bool-super-reaction-hide-anim: true; /* Replace Super Reactions with a blink animation */
 	--display-profile-effects: none; /* Avatar decorations & profile effects */
+	--display-clan-tags: unset; /* Clan tags next to the usernames */
 	--display-server-settings-boost-tab: none; /* Server settings menu Boost tab */
+	--bool-show-name-gradients: true; /* Gradients & glow in usernames, boosted servers only */
+	--display-server-members-activity: unset; /* Hide servers members activity list */
 }
 
 /* ------------------ */
@@ -223,12 +226,17 @@ div[class*="notice"][class*="colorPremium"] {
 	display: none;
 }
 
+/* "Amp up your profile" in profile popup */
+.user-profile-popout div[class*="upsellContainer"] {
+	display: none;
+}
+
 /* ------------- */
 /* Server boosts */
 /* ------------- */
 
 /* Boost progress bar */
-#channels > ul > li > div[data-list-item-id^="channels___boosts"] {
+#channels > ul > li div[data-list-item-id^="channels___boosts"] {
 	display: none;
 }
 
@@ -361,12 +369,24 @@ div[class^="wrapper"]:has(div[class^="instructions"]) {
 /* ------------------ */
 
 /* Chatbox buttons */
-form > div[class^="channelBottomBarArea_"] {
+form div[class^="channelBottomBarArea_"] {
 	div[class^="buttons_"] {
-		/* Send gift button */
+		/* Send gift button (both versions) */
 		> div:has(div[class*="trinketsIcon_"]),
 		> button {
 			display: none;
+		}
+
+		/* GIF picker button */
+		div[class^="expression-picker-chat-input-button"]:has(
+				+ div[class^="expression-picker-chat-input-button"] div[class*="stickerButton_"]
+			) {
+			display: var(--display-gif-button, flex);
+		}
+
+		/* Sticker picker button */
+		div[class^="expression-picker-chat-input-button"]:has(div[class*="stickerButton_"]) {
+			display: var(--display-sticker-button, flex);
 		}
 	}
 
@@ -382,7 +402,7 @@ div[class*="popoverReactionHoverBar"] > div[role="button"]:has(div[data-type="em
 	display: var(--display-hover-reaction-emoji, flex);
 
 	/* Separator */
-	+ div[class^="separator"] {
+	~ div[class^="separator"] {
 		display: var(--display-hover-reaction-emoji);
 	}
 }
@@ -404,6 +424,12 @@ div[class^="profileEffects"] {
 	display: var(--display-profile-effects);
 }
 /* Nameplates */
+div[class*="member_"] > div[class*="nameplated_"] > div[class^="container_"] {
+	display: var(--display-nameplates);
+}
+li[role="listitem"] > div[class*="interactive_"] > div[class^="container_"] {
+	display: var(--display-nameplates);
+}
 
 div[class*="member_"] > div[class*="nameplated_"] > div[class^="container_"] {
 	display: var(--display-nameplates);
@@ -425,7 +451,7 @@ div[class^="toolbar_"] > a[href*="support.discord.com"] {
 }
 
 /* Hide explore servers button */
-div[class^="footer"]:has([data-list-item-id="guildsnav___guild-discover-button"]) {
+div[class^="listItem_"]:has([data-list-item-id="guildsnav___guild-discover-button"]) {
 	display: none;
 }
 div[class*="unreadMentionsFixedFooter"] {
@@ -465,4 +491,33 @@ section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) {
 /* Hide "Play Again" activities heading in DMs list */
 li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) {
 	display: none;
+}
+
+/* Hide clan tags next to the usernames */
+span[class^="chipletContainerInner__"]:has(img[class^="badge__"]),
+span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
+	display: var(--display-clan-tags, inline-flex);
+}
+
+/* Only for some servers, roles get animated gradients + glow */
+@container style(--bool-show-name-gradients: false) or style(--bool-show-name-gradients: false) {
+	span[class*="usernameGradient"] {
+		color: var(--custom-gradient-color-1);
+		background: none;
+		-webkit-text-fill-color: initial;
+
+		~ [class*="nameGlow"] {
+			display: none;
+		}
+	}
+}
+
+/* Hide server members activity title */
+h3[class^="membersGroup_"]:has(span[class^="headerContainer__"]) {
+	display: var(--display-server-members-activity, block);
+}
+
+/* Hide server members activity cards */
+div[class^="members_"] div:not([class]):has(div[class*="openOnHover__"]) {
+	display: var(--display-server-members-activity);
 }
