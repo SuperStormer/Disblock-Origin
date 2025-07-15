@@ -54,10 +54,22 @@
     "Hide": "none"
 }
 
+@var select     display-clan-tags "Display clan tags next to the usernames" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
 @var select     display-server-settings-boost-tab "Display boost tab in server settings" {
     "Show*": "unset",
     "Hide": "none"
 }
+
+@var select     display-server-members-activity "Hide servers members activity list" {
+    "Show*": "unset",
+    "Hide": "none"
+}
+
+@var checkbox   bool-show-name-gradients "Render gradients & glow in usernames, boosted servers only" 1
 
 @var select     display-settings-billing-header "Display settings billing header" {
     "Show*": "unset",
@@ -91,5 +103,5 @@
 ==/UserStyle== */
 
 @-moz-document domain("discord.com") {
-    @import url("https://allpurposem.at/disblock/DisblockOrigin.theme.css");
+    @import url("https://raw.codeberg.page/AllPurposeMat/Disblock-Origin/DisblockOrigin.theme.css");
 }

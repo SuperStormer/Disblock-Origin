@@ -25,7 +25,10 @@
   --display-profile-effects: none;                /* Avatar decorations & profile effects */
   --display-nameplates: none;                     /* Hide nameplates in the members list */
   --display-active-now: unset;                    /* Active Now column in friends list */
+  --display-clan-tags: unset;                     /* Clan tags next to the usernames */
   --display-server-settings-boost-tab: none;      /* Server settings menu Boost tab */
+  --bool-show-name-gradients: true;               /* Gradients & glow in usernames, boosted servers only */
+  --display-server-members-activity: unset;       /* Hide servers members activity list */
 
   --display-settings-billing-header: unset;       /* Settings menu Billing Settings header */
   --display-settings-nitro-tab: none;             /* Settings menu Nitro tab */
@@ -172,8 +175,8 @@ div[class*="overlayBackground_"]:has(div[class*="contentText_"] > a[role="button
 /* Hide "sneak peek" upsell banner */
 div[class*="notice"][class*="colorPremium"] { display: none; }
 
-/* "Amp up your profile" when opening a profile */
-div[class^="accountProfilePopoutWrapper"] div[class^="upsellContainer"] { display: none; }
+/* "Amp up your profile" in profile popup */
+.user-profile-popout div[class*=upsellContainer] { display: none; }
 
 /* ------------- */
 /* Server boosts */
@@ -265,7 +268,7 @@ div[class^=wrapper]:has(div[class^=instructions]) { display: none; }
 /* ------------------ */
 
 /* Chatbox buttons */
-form > div[class^=channelBottomBarArea_] {
+form div[class^=channelBottomBarArea_] {
   div[class^="buttons_"]
   {
     /* Send gift button (both versions) */
@@ -288,7 +291,7 @@ div[class*="popoverReactionHoverBar"] > div[role="button"]:has(div[data-type="em
   display: var(--display-hover-reaction-emoji, flex);
 
   /* Separator */
-  + div[class^="separator"] { display: var(--display-hover-reaction-emoji); }
+  ~ div[class^="separator"] { display: var(--display-hover-reaction-emoji); }
 }
 
 /* Edit image with Apps on image hover */
@@ -302,6 +305,7 @@ div[class^="profileEffects"] { display: var(--display-profile-effects); }
 
 /* Nameplates */
 div[class*="member_"] > div[class*="nameplated_"] > div[class^="container_"] { display: var(--display-nameplates); }
+li[role="listitem"] > div[class*="interactive_"] > div[class^="container_"] { display: var(--display-nameplates); }
 
 /* Animated "Activities" hover effect in calls */
 /* NOTE: would be nice to disable the white hover effect,
@@ -312,7 +316,7 @@ div[aria-labelledby^="vc-activities"] { display: none; }
 div[class^="toolbar_"] > a[href*="support.discord.com"] { display: none; }
 
 /* Hide explore servers button */
-div[class^="footer"]:has([data-list-item-id="guildsnav___guild-discover-button"]) { display: none; }
+div[class^="listItem_"]:has([data-list-item-id="guildsnav___guild-discover-button"]) { display: none; }
 div[class*="unreadMentionsFixedFooter"] { bottom: 0; } /* Removed unread mentions indicator footer offset */
 
 /* Hide download button in web version */
@@ -339,6 +343,31 @@ section[class^="panels"] > [class*="mask"]:has([class*="questRewardTile"]) { dis
 
 /* Hide "Play Again" activities heading in DMs list */
 li[role="listitem"] ~ div[class^="container"]:has(div[class^="iconContainer"]) { display: none; }
+
+/* Hide clan tags next to the usernames */
+span[class^="chipletContainerInner__"]:has(img[class^="badge__"]),
+span[class^="guildTagContainer__"]:has(img[class^="badge__"]) {
+  display: var(--display-clan-tags, inline-flex);
+}
+
+/* Only for some servers, roles get animated gradients + glow */
+@container style(--bool-show-name-gradients: false) or style(--bool-show-name-gradients: false) {
+    span[class*=usernameGradient ] {
+      color: var(--custom-gradient-color-1);
+      background: none;
+      -webkit-text-fill-color: initial;
+
+      ~ [class*=nameGlow] {
+        display: none;
+      }
+    }
+}
+
+/* Hide server members activity title */
+h3[class^="membersGroup_"]:has(span[class^="headerContainer__"]) { display: var(--display-server-members-activity, block); }
+
+/* Hide server members activity cards */
+div[class^="members_"] div:not([class]):has(div[class*="openOnHover__"]) { display: var(--display-server-members-activity); }
 
 /* ------------------------ */
 /* Disblock Origin branding */
